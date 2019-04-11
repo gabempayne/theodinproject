@@ -1,7 +1,7 @@
 function computerPlay() {
 	var choices = ['Rock', 'Paper', 'Scissors'];
 
-	return choices[Math.floor(Math.random() * choices.length)];
+	return choices[Math.floor(Math.random() * choices.length - 1)];
 }
 
 function playRound(playerSelection,computerSelection) {
