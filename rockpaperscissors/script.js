@@ -60,33 +60,43 @@ function game(){
 
   // Loop to play 5 games
   for(var i = 0; i < 5; i++) {
-    var playerSelection = prompt("Rock, Paper, Scissors?");
-    var computerSelection = computerPlay();
+	    var playerSelection = prompt("Rock, Paper, Scissors?");
+	    while(player != null){
+		    var computerSelection = computerPlay();
 
-    // Play a round and store the result
-    var result = playRound(computerSelection, playerSelection);
+		    // Play a round and store the result
+		    var result = playRound(computerSelection, playerSelection[0].toUpperCase() + playerSelection.toLowerCase().slice(1));
 
-    // Parse the result and to score
-    switch(result) {
-      case 'computer':
-      computerScore++;
-        break;
-      case 'player':
-      playerScore++;
-        break;
-    }
-  }
-
+		    // Parse the result and to score
+		    switch(result) {
+		      case 'computer':
+		      computerScore++;
+		        break;
+		      case 'player':
+		      playerScore++;
+		        break;
+		    }
+		    if(playerScore > computerScore) {
+		    	console.log("Player Wins");
+			} else if(computerScore > playerScore) {
+			  	console.log("Computer Wins");
+			} else {
+			  	console.log("Tie Game");
+			}
+		}
+	}
+  // Print score
   console.log(playerScore, computerScore);
+
+  // Loop win results
   if(playerScore > computerScore) {
-    console.log("Player Wins");
-  }else if(computerScore > playerScore) {
-    console.log("Computer Wins");
+  	console.log("Player Wins!");
+  } else if(computerScore > playerScore){
+  	console.log("Computer Wins!");
   } else {
-    console.log("Tie Game");
+  	console.log("Tie Game!");
   }
-  // Display the winner
-  // return winner;
+
 }
 game();
 
