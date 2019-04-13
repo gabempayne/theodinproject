@@ -40,24 +40,33 @@ function main(){
 		}
 
 		rock_div.addEventListener('click', function() {
-			var playerSelection = game("Rock");
+			var playerSelection = "Rock";
 			var result = playRound(computerSelection, playerSelection);
 			findResult(result);
-			console.log(playerSelection);
 		})
 
 		paper_div.addEventListener('click', function() {			
-	    	var playerSelection = game("Paper");
+	    	var playerSelection = "Paper";
 		   	var result = playRound(computerSelection, playerSelection);
 			findResult(result);
 		})
 
 
 		scissor_div.addEventListener('click', function() {
-			var playerSelection = game("Scissors");
+			var playerSelection = "Scissors";
 			var result = playRound(computerSelection, playerSelection);
 			findResult(result);
 		})
+
+		switch(result) {
+	case 'computer':
+		computerScore++;
+		break;
+  	case 'player':
+  		playerScore++;
+    	break;
+	}	
+
   // Print score
   console.log(playerScore, computerScore);
 
@@ -69,9 +78,7 @@ function main(){
   } else {
   	console.log("Tie Game!");
   }
-	    
 }
-
 // Return a single result
 function playRound(computerSelection, playerSelection) {
   var result;
@@ -131,21 +138,6 @@ function playRound(computerSelection, playerSelection) {
 function scoreChange() {
 
 }
-
-
-function findResult(result) {
-
-switch(result) {
-	case 'computer':
-		computerScore++;
-		break;
-  	case 'player':
-  		playerScore++;
-    	break;
-	}	
-}
-
-
 
 main();
 						
