@@ -1,5 +1,6 @@
 const userScore = 0;
 const compScore = 0;
+const display = document.getElementById('display');
 const userScore_span = document.getElementById('user-score');
 const compScore_span = document.getElementById('comp-score');
 const scoreBoard_div = document.querySelector('.score-board');
@@ -17,55 +18,68 @@ function computerPlay() {
 function main(){
 	rock_div.addEventListener('click', function() {
 		var playerSelection = "Rock";
+      game(playerSelection, computerPlay());
+
 	})
 
 	paper_div.addEventListener('click', function() {			
     	var playerSelection = "Paper";
+      game(playerSelection, computerPlay());
 	})
 
 
 	scissor_div.addEventListener('click', function() {
 		var playerSelection = "Scissors";
+      game(playerSelection, computerPlay());
 	})
 }
 
 function game(playerSelection, computerSelection) {
   if(playerSelection == 'Rock'){
     if(computerSelection == 'Rock'){
-      console.log("Tie Game");
+      display.textContent="Tie Game!";
     }
     if(computerSelection == 'Paper'){
-      console.log("You Lose! " + computerSelection + " beats " + playerSelection);
+      display.textContent="You Lose! " + computerSelection + " beats " + playerSelection;
+      compScore_span.textContent++;
     }
     if(computerSelection == 'Scissors'){
-      console.log("You Win! " + playerSelection + " beats " + computerSelection);
+      display.textContent= "You Win! " + playerSelection + " beats " + computerSelection;
+      userScore_span.textContent++;
     }
   } 
   if(playerSelection == 'Scissors'){
     if(computerSelection == 'Scissors'){
-      console.log("Tie Game");
+      display.textContent="Tie Game!";
     }
     if(computerSelection == 'Rock'){
-      console.log("You Lose! " + computerSelection + " beats " + playerSelection);
+      display.textContent="You Lose " + computerSelection + " beats " + playerSelection;
+      compScore_span.textContent++;
     }
     if(computerSelection == 'Paper'){
-      console.log("You Win! " + playerSelection + " beats " + computerSelection);
+      display.textContent= "You Win! " + playerSelection + " beats " + computerSelection;
+      userScore_span.textContent++;
     }
   } 
   if(playerSelection == 'Paper'){
     if(computerSelection == 'Paper'){
-      console.log("Tie Game");
+      display.textContent="Tie Game!";
     }
     if(computerSelection == 'Scissors'){
-      console.log("You Lose! " + computerSelection + " beats " + playerSelection);
+      display.textContent="You Lose " + computerSelection + " beats " + playerSelection;
+      compScore_span.textContent++;
     }
     if(computerSelection == 'Rock'){
-      console.log("You Win! " + playerSelection + " beats " + computerSelection);
+      display.textContent= "You Win! " + playerSelection + " beats " + computerSelection;
+      userScore_span.textContent++;
     }
+  }
 }
 
-function scoreChange() {
-
-}
+// function roundOver(round) {
+//   if(round == 5){
+//     alert("Game Over")
+//   }
+// }
 
 main();		
