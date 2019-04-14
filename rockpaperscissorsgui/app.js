@@ -82,12 +82,41 @@ function game(playerSelection, computerSelection) {
   }
 }
 
+
+
 function roundOver(round) {
   if(userScore == 5){
     display.textContent="We have a winner!";
-  }
-  if (compScore == 5) {
-    display.textContent="You are TRASH!"; 
+    scissor_div.removeEventListener('click', function() {
+      var playerSelection = "Scissors";
+      game(playerSelection, computerPlay());
+    })
+      rock_div.removeEventListener('click', function() {
+      var playerSelection = "Rock";
+      game(playerSelection, computerPlay());
+
+    })
+      paper_div.removeEventListenerpaper_div.addEventListener('click', function() {     
+        var playerSelection = "Paper";
+        game(playerSelection, computerPlay());
+    })
+
+    if (compScore == 5) {
+        display.textContent="You are TRASH!"; 
+        scissor_div.removeEventListener('click', function() {
+        var playerSelection = "Scissors";
+          game(playerSelection, computerPlay());
+      })
+        rock_div.removeEventListener('click', function() {
+          var playerSelection = "Rock";
+          game(playerSelection, computerPlay());
+
+      })
+        paper_div.removeEventListenerpaper_div.addEventListener('click', function() {     
+          var playerSelection = "Paper";
+          game(playerSelection, computerPlay());
+      })
+    }
   }
 }
 
