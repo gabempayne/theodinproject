@@ -1,5 +1,5 @@
-const userScore = 0;
-const compScore = 0;
+let userScore = 0;
+let compScore = 0;
 const display = document.getElementById('display');
 const userScore_span = document.getElementById('user-score');
 const compScore_span = document.getElementById('comp-score');
@@ -42,10 +42,12 @@ function game(playerSelection, computerSelection) {
     if(computerSelection == 'Paper'){
       display.textContent="You Lose! " + computerSelection + " beats " + playerSelection;
       compScore_span.textContent++;
+      roundOver(compScore++);
     }
     if(computerSelection == 'Scissors'){
       display.textContent= "You Win! " + playerSelection + " beats " + computerSelection;
       userScore_span.textContent++;
+      roundOver(userScore++);
     }
   } 
   if(playerSelection == 'Scissors'){
@@ -55,10 +57,12 @@ function game(playerSelection, computerSelection) {
     if(computerSelection == 'Rock'){
       display.textContent="You Lose " + computerSelection + " beats " + playerSelection;
       compScore_span.textContent++;
+      roundOver(compScore++);
     }
     if(computerSelection == 'Paper'){
       display.textContent= "You Win! " + playerSelection + " beats " + computerSelection;
       userScore_span.textContent++;
+      roundOver(userScore++);
     }
   } 
   if(playerSelection == 'Paper'){
@@ -68,18 +72,23 @@ function game(playerSelection, computerSelection) {
     if(computerSelection == 'Scissors'){
       display.textContent="You Lose " + computerSelection + " beats " + playerSelection;
       compScore_span.textContent++;
+      roundOver(compScore++);
     }
     if(computerSelection == 'Rock'){
       display.textContent= "You Win! " + playerSelection + " beats " + computerSelection;
       userScore_span.textContent++;
+      roundOver(userScore++);
     }
   }
 }
 
-// function roundOver(round) {
-//   if(round == 5){
-//     alert("Game Over")
-//   }
-// }
+function roundOver(round) {
+  if(userScore == 5){
+    display.textContent="We have a winner!";
+  }
+  if (compScore == 5) {
+    display.textContent="You are TRASH!"; 
+  }
+}
 
 main();		
