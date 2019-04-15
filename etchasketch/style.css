@@ -1,7 +1,18 @@
+#game-board {
+  	position: relative;
+  	background-color: gray;
+  	z-index: -2;
+  	justify-content: center;
+  	padding: 50px;
+  	margin: 20px;
+}
+
 .square {
     height: 50px;
     width: 50px;
-    background-color: #555;
+    background-color: #000;
+	display: inline-block;
+	border: solid white 1px;
+	position: relative;
 
-	margin: 20px auto;
 }
