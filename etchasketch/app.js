@@ -1,26 +1,33 @@
 const grid = document.getElementById("game-board");
-const square = document.getElementsByClassName("square");
+const squares = document.getElementsByClassName("square");
 
 function main() {
-	for(var i=0; i < 8; i++){
-		for(var j=0; j < 8; j++){
-		var newDiv = document.createElement('div');
-		var br = document.createElement('br');
-	  	newDiv.className = 'square';
-	 	grid.appendChild(newDiv);
+	// User-generated grid Size
+	var size = gridSize();
+
+	// Loop and display squares in grid
+	// outside loop
+	for(var i=0; i < size; i++){
+		//inside loop
+		for(var j=0; j < size; j++){
+			var newDiv = document.createElement('div');
+			var br = document.createElement('br');
+		  	newDiv.className = 'square';
+		 	grid.appendChild(newDiv);
 	  	}
-	  grid.appendChild(newDiv);
-	  grid.appendChild(br);
+	  	grid.appendChild(newDiv);
+		grid.appendChild(br);
 	}
 }
 
-square.onclick = function(){
-	if(document.square.style.backgroundColor =="white"){
-		document.square.style.backgroundColor="black";
-	}
-	if(document.square.style.backgroundColor =="black") {
-		document.square.style.backgroundColor = "white";
-	}
-};
+// Hover function to change color
+square.onmouseover = function(){
+	console.log('you');
+}
+
+function gridSize() {
+	var size = prompt("Enter grid size");
+	return size;
+}
 
 main();

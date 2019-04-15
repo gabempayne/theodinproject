@@ -1,18 +1,20 @@
-#game-board {
-  	position: relative;
-  	background-color: gray;
-  	z-index: -2;
-  	justify-content: center;
-  	padding: 50px;
-  	margin: 20px;
+#container {
+	margin: 10px 10px 10px 50%;
+	position: relative;
 }
 
 .square {
-    height: 50px;
-    width: 50px;
-    background-color: #000;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
 	display: inline-block;
-	border: solid white 1px;
-	position: relative;
-
+	border: solid black 3px;
+	margin-bottom: -6px;
+	margin-left: -4px;
 }
+
+.square:hover {
+	background-color: yellow;
+}
+
+
