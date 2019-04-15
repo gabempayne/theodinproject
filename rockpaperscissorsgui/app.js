@@ -34,12 +34,12 @@ function main(){
 }
 
 function roundOver(userScore, compScore) {
-  if(userScore >= 5){
+  if(userScore_span.textContent == 5){
     display.textContent="We have a winner!";
     document.getElementById("r").style.pointerEvents = 'none';
     document.getElementById("p").style.pointerEvents = 'none';
     document.getElementById("s").style.pointerEvents = 'none';
-  }  if (compScore >= 5) {
+  }  if (compScore_span.textContent == 5) {
     document.getElementById("r").style.pointerEvents = 'none';
     document.getElementById("p").style.pointerEvents = 'none';
     document.getElementById("s").style.pointerEvents = 'none';   
@@ -59,7 +59,7 @@ function game(playerSelection, computerSelection) {
     if(computerSelection == 'Scissors'){
       display.textContent= "You Win! " + playerSelection + " beats " + computerSelection;
       userScore_span.textContent++;
-      roundOver(userScore++, userScore);
+      roundOver(userScore++);
     }
   } 
   if(playerSelection == 'Scissors'){
@@ -69,12 +69,12 @@ function game(playerSelection, computerSelection) {
     if(computerSelection == 'Rock'){
       display.textContent="You Lose " + computerSelection + " beats " + playerSelection;
       compScore_span.textContent++;
-      roundOver(userScore, compScore++);
+      roundOver(ompScore++);
     }
     if(computerSelection == 'Paper'){
       display.textContent= "You Win! " + playerSelection + " beats " + computerSelection;
       userScore_span.textContent++;
-      roundOver(userScore++, compScore);
+      roundOver(userScore++);
     }
   } 
   if(playerSelection == 'Paper'){
@@ -84,13 +84,13 @@ function game(playerSelection, computerSelection) {
     if(computerSelection == 'Scissors'){
       display.textContent="You Lose " + computerSelection + " beats " + playerSelection;
       compScore_span.textContent++;
-      roundOver(userScore, compScore++);
+      roundOver(compScore++);
     }
     if(computerSelection == 'Rock'){
       display.textContent= "You Win! " + playerSelection + " beats " + computerSelection;
       userScore_span.textContent++;
-      roundOver(userScore++, compScore);
+      roundOver(userScore++);
     }
   }
 }
-main();		
+main();
