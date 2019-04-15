@@ -16,23 +16,35 @@ function computerPlay() {
 }
 
 function main(){
-	rock_div.addEventListener('click', function() {
+	rock_div.onclick = function(){
 		var playerSelection = "Rock";
       game(playerSelection, computerPlay());
+	};
 
-	})
-
-	paper_div.addEventListener('click', function() {			
+	paper_div.onclick = function(){	
     	var playerSelection = "Paper";
       game(playerSelection, computerPlay());
-	})
+	};
 
 
-	scissor_div.addEventListener('click', function() {
+	scissor_div.onclick = function(){
 		var playerSelection = "Scissors";
       game(playerSelection, computerPlay());
-	})
+	};
 }
+
+function roundOver(userScore, compScore) {
+  if(userScore >= 5){
+    display.textContent="We have a winner!";
+    document.getElementById("r").style.pointerEvents = 'none';
+    document.getElementById("p").style.pointerEvents = 'none';
+    document.getElementById("s").style.pointerEvents = 'none';
+  }  if (compScore >= 5) {
+    document.getElementById("r").style.pointerEvents = 'none';
+    document.getElementById("p").style.pointerEvents = 'none';
+    document.getElementById("s").style.pointerEvents = 'none';   
+    display.textContent="You are TRASH!";    
+  }} 
 
 function game(playerSelection, computerSelection) {
   if(playerSelection == 'Rock'){
@@ -42,12 +54,12 @@ function game(playerSelection, computerSelection) {
     if(computerSelection == 'Paper'){
       display.textContent="You Lose! " + computerSelection + " beats " + playerSelection;
       compScore_span.textContent++;
-      roundOver(compScore++);
+      roundOver(compScore++, userScore);
     }
     if(computerSelection == 'Scissors'){
       display.textContent= "You Win! " + playerSelection + " beats " + computerSelection;
       userScore_span.textContent++;
-      roundOver(userScore++);
+      roundOver(userScore++, userScore);
     }
   } 
   if(playerSelection == 'Scissors'){
@@ -57,12 +69,12 @@ function game(playerSelection, computerSelection) {
     if(computerSelection == 'Rock'){
       display.textContent="You Lose " + computerSelection + " beats " + playerSelection;
       compScore_span.textContent++;
-      roundOver(compScore++);
+      roundOver(userScore, compScore++);
     }
     if(computerSelection == 'Paper'){
       display.textContent= "You Win! " + playerSelection + " beats " + computerSelection;
       userScore_span.textContent++;
-      roundOver(userScore++);
+      roundOver(userScore++, compScore);
     }
   } 
   if(playerSelection == 'Paper'){
@@ -72,52 +84,13 @@ function game(playerSelection, computerSelection) {
     if(computerSelection == 'Scissors'){
       display.textContent="You Lose " + computerSelection + " beats " + playerSelection;
       compScore_span.textContent++;
-      roundOver(compScore++);
+      roundOver(userScore, compScore++);
     }
     if(computerSelection == 'Rock'){
       display.textContent= "You Win! " + playerSelection + " beats " + computerSelection;
       userScore_span.textContent++;
-      roundOver(userScore++);
+      roundOver(userScore++, compScore);
     }
   }
 }
-
-
-
-function roundOver(round) {
-  if(userScore == 5){
-    display.textContent="We have a winner!";
-    scissor_div.removeEventListener('click', function() {
-      var playerSelection = "Scissors";
-      game(playerSelection, computerPlay());
-    })
-      rock_div.removeEventListener('click', function() {
-      var playerSelection = "Rock";
-      game(playerSelection, computerPlay());
-
-    })
-      paper_div.removeEventListenerpaper_div.addEventListener('click', function() {     
-        var playerSelection = "Paper";
-        game(playerSelection, computerPlay());
-    })
-
-    if (compScore == 5) {
-        display.textContent="You are TRASH!"; 
-        scissor_div.removeEventListener('click', function() {
-        var playerSelection = "Scissors";
-          game(playerSelection, computerPlay());
-      })
-        rock_div.removeEventListener('click', function() {
-          var playerSelection = "Rock";
-          game(playerSelection, computerPlay());
-
-      })
-        paper_div.removeEventListenerpaper_div.addEventListener('click', function() {     
-          var playerSelection = "Paper";
-          game(playerSelection, computerPlay());
-      })
-    }
-  }
-}
-
 main();		
