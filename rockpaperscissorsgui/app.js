@@ -36,14 +36,16 @@ function main(){
 function roundOver(userScore, compScore) {
   if(userScore_span.textContent == 5){
     display.textContent="We have a winner!";
-    document.getElementById("r").style.pointerEvents = 'none';
-    document.getElementById("p").style.pointerEvents = 'none';
-    document.getElementById("s").style.pointerEvents = 'none';
+
+    rock_div.style.pointerEvents = 'none';
+    paper_div.getElementById("p").style.pointerEvents = 'none';
+    scissor_div.getElementById("s").style.pointerEvents = 'none';
   }  if (compScore_span.textContent == 5) {
-    document.getElementById("r").style.pointerEvents = 'none';
-    document.getElementById("p").style.pointerEvents = 'none';
-    document.getElementById("s").style.pointerEvents = 'none';   
-    display.textContent="You are TRASH!";    
+    display.textContent="You are TRASH!"; 
+    
+    rock_div.getElementById("r").style.pointerEvents = 'none';
+    paper_div.getElementById("p").style.pointerEvents = 'none';
+    scissor_div.getElementById("s").style.pointerEvents = 'none';   
   }} 
 
 function game(playerSelection, computerSelection) {
