@@ -13,9 +13,9 @@ function createGrid() {
 			var br = document.createElement('br');
             newDiv.className = 'square';            
             grid.appendChild(newDiv);
-            newDiv.addEventListener('mouseover', function() {
-                console.log('hi');
-            })
+            newDiv.addEventListener('mouseover', function(event){
+                event.target.style.backgroundColor = "black";
+            });
 	  	}
 	  	grid.appendChild(newDiv);
         grid.appendChild(br);
