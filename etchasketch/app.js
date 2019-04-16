@@ -1,5 +1,4 @@
 const grid = document.getElementById("game-board");
-const squares = document.getElementsByClassName("square");
 
 function main() {
 	// User-generated grid Size
@@ -21,8 +20,8 @@ function main() {
 }
 
 // Hover function to change color
-square.onmouseover = function(){
-	console.log('you');
+getSquares().onmouseover = function(){
+	console.log("mouse over");
 }
 
 function gridSize() {
@@ -30,4 +29,11 @@ function gridSize() {
 	return size;
 }
 
+function getSquares() {
+	const squares = document.getElementsByClassName("square");
+	return squares;
+}
+
 main();
+
+object.addEventListener("mouseover", myScript);
