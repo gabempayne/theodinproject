@@ -1,4 +1,5 @@
 const grid = document.getElementById("game-board");
+const reset = document.getElementById("reset-button");
 
 function createGrid() {
 	// User-generated grid Size
@@ -14,16 +15,27 @@ function createGrid() {
             newDiv.className = 'square';            
             grid.appendChild(newDiv);
             newDiv.addEventListener('mouseover', function(event){
-                event.target.style.backgroundColor = "black";
+                event.target.style.backgroundColor ='red';
+                console.log(event.target.style.backgroundColor)
+         
             });
 	  	}
-	  	grid.appendChild(newDiv);
+	  	//grid.appendChild(newDiv);
         grid.appendChild(br);
     }
+    resetGame();
 }
 
 function gridSize() {
 	var size = prompt("Enter grid size");
 	return size;
 }
+
+function resetGame() {
+    reset.addEventListener('click', function() {
+        location.reload(true);
+    });
+}
+
+
 createGrid();
