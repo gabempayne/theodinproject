@@ -1,11 +1,9 @@
 const grid = document.getElementById("game-board");
 const reset = document.getElementById("reset-button");
-const square = document.getElementsByClassName("square");
 
 function createGrid() {
 	// User-generated grid Size
-    var size = gridSize();
-   
+    var size = gridSize();  
 
 	// Loop and display squares in grid
 	// outside loop
@@ -28,16 +26,16 @@ function createGrid() {
     resetGame();
 }
 
+// Prompt user for grid size; returns grid
 function gridSize() {
     var size = prompt("Enter grid size");
 	return size;
 }
 
+// Refreshes Chrome
 function resetGame() {
     reset.addEventListener('click', function() {
         location.reload(true);
     });
 }
-
-
 createGrid();
