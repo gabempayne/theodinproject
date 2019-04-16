@@ -1,6 +1,6 @@
 const grid = document.getElementById("game-board");
 
-function main() {
+function createGrid() {
 	// User-generated grid Size
 	var size = gridSize();
 
@@ -11,29 +11,19 @@ function main() {
 		for(var j=0; j < size; j++){
 			var newDiv = document.createElement('div');
 			var br = document.createElement('br');
-		  	newDiv.className = 'square';
-		 	grid.appendChild(newDiv);
+            newDiv.className = 'square';            
+            grid.appendChild(newDiv);
+            newDiv.addEventListener('mouseover', function() {
+                console.log('hi');
+            })
 	  	}
 	  	grid.appendChild(newDiv);
-		grid.appendChild(br);
-	}
-}
-
-// Hover function to change color
-getSquares().onmouseover = function(){
-	console.log("mouse over");
+        grid.appendChild(br);
+    }
 }
 
 function gridSize() {
 	var size = prompt("Enter grid size");
 	return size;
 }
-
-function getSquares() {
-	const squares = document.getElementsByClassName("square");
-	return squares;
-}
-
-main();
-
-object.addEventListener("mouseover", myScript);
+createGrid();
