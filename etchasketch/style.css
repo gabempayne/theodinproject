@@ -1,6 +1,5 @@
 
 #game-board {
-    min-width: 1000px;
     overflow: hidden;
     margin: 10px 10px 10px 50%;
     padding: 10px;
@@ -19,5 +18,16 @@
 .square:hover {
 	background-color: yellow;
 }
+
+#reset-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
 
 

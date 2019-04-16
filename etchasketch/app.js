@@ -1,9 +1,11 @@
 const grid = document.getElementById("game-board");
 const reset = document.getElementById("reset-button");
+const square = document.getElementsByClassName("square");
 
 function createGrid() {
 	// User-generated grid Size
-	var size = gridSize();
+    var size = gridSize();
+   
 
 	// Loop and display squares in grid
 	// outside loop
@@ -14,10 +16,10 @@ function createGrid() {
 			var br = document.createElement('br');
             newDiv.className = 'square';            
             grid.appendChild(newDiv);
+
+            grid.style.width = (size * 30).toString()+"px";
             newDiv.addEventListener('mouseover', function(event){
-                event.target.style.backgroundColor ='red';
-                console.log(event.target.style.backgroundColor)
-         
+                event.target.style.backgroundColor ='red';         
             });
 	  	}
 	  	//grid.appendChild(newDiv);
@@ -27,7 +29,7 @@ function createGrid() {
 }
 
 function gridSize() {
-	var size = prompt("Enter grid size");
+    var size = prompt("Enter grid size");
 	return size;
 }
 
