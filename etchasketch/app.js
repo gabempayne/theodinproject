@@ -1,11 +1,16 @@
-const grid = document.getElementById("game-board");
+const gameboard = document.getElementById("game-board");
 const reset = document.getElementById("reset-button");
 
-function createGrid() {
-	// User-generated grid Size
-    var size = gridSize();  
+function createGameboard() {
+	// User-generated gameboard Size
+    var size = gameboardSize();  
 
-	// Loop and display squares in grid
+    var width = 500, height = 500;
+
+    gameboard.style.width = width;
+    gameboard.style.heigh = height;
+
+	// Loop and display squares in gameboard
 	// outside loop
 	for(var i=0; i < size; i++){
 		//inside loop
@@ -13,30 +18,28 @@ function createGrid() {
 			var newDiv = document.createElement('div');
 			var br = document.createElement('br');
             newDiv.className = 'square';
-            grid.appendChild(newDiv);
+            newDiv.style.backgroundColor == '#fff';  
 
-            console.log(newDiv.style.height);
-            console.log(newDiv.style.width);
+            newDiv.style.width = (width / size).toString() + "px";
+            newDiv.style.height= (height / size).toString()+"px";
 
-            console.log(grid.style.height);
-            console.log(grid.style.width);
-            
-            newDiv.style.height = (newDiv.style.height+grid.style.height / size).toString()+"px";
-            newDiv.style.width = (newDiv.style.width+grid.style.width / size).toString()+"px";
+            gameboard.appendChild(newDiv);
 
             newDiv.addEventListener('mouseover', function(event){
-                event.target.style.backgroundColor ='red';         
+                if(event.target.style.backgroundColor =='#fff'){
+                    event.target.style.backgroundColor ='#000';         
+                }
             });
 	  	}
-	  	//grid.appendChild(newDiv);
-        grid.appendChild(br);
+	  	//gameboard.appendChild(newDiv);
+        gameboard.appendChild(br);
     }
     resetGame();
 }
 
-// Prompt user for grid size; returns grid
-function gridSize() {
-    var size = prompt("Enter grid size");
+// Prompt user for gameboard size; returns gameboard
+function gameboardSize() {
+    var size = prompt("Enter gameboard size");
 	return size;
 }
 
@@ -46,4 +49,4 @@ function resetGame() {
         location.reload(true);
     });
 }
-createGrid();
+createGameboard();
