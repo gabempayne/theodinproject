@@ -12,10 +12,18 @@ function createGrid() {
 		for(var j=0; j < size; j++){
 			var newDiv = document.createElement('div');
 			var br = document.createElement('br');
-            newDiv.className = 'square';            
+            newDiv.className = 'square';
             grid.appendChild(newDiv);
 
-            grid.style.width = (size * 30).toString()+"px";
+            console.log(newDiv.style.height);
+            console.log(newDiv.style.width);
+
+            console.log(grid.style.height);
+            console.log(grid.style.width);
+            
+            newDiv.style.height = (newDiv.style.height+grid.style.height / size).toString()+"px";
+            newDiv.style.width = (newDiv.style.width+grid.style.width / size).toString()+"px";
+
             newDiv.addEventListener('mouseover', function(event){
                 event.target.style.backgroundColor ='red';         
             });
