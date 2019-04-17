@@ -24,7 +24,7 @@ function createGameboard() {
             var br = document.createElement('br');
             
             squareDiv.className = 'square';
-            squareDiv.style.backgroundColor == '#fff';  
+            squareDiv.style.backgroundColor = '#fff';  
 
             // set width and height of squares
             squareDiv.style.width = Math.round(width / size).toString() + "px";
@@ -33,8 +33,7 @@ function createGameboard() {
             gameboard.appendChild(squareDiv);
 
             squareDiv.addEventListener('mouseover', function(event){
-                var color 
-                event.target.style.backgroundColor ='#000';         
+                event.target.style.backgroundColor ='#000';                         
             });
 	  	}
 	  	//gameboard.appendChild(squareDiv);

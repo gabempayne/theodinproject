@@ -3,14 +3,13 @@
 	border-radius: 4px;
 	text-align: center;
 	padding: 15px 20px;
-	font-family: Asap, sans-serif;
 	position: relative;
 }
 
 .square {
-    height: 25px;
+    /* height: 25px;
     width: 25px;
-    background-color: #fff;
+    background-color: #fff; */
 	display: inline-block;
 	border: solid black 3px;
 	margin-bottom: -6px;
@@ -22,7 +21,7 @@
 }
 
 #reset-button {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     border: none;
     color: white;
     text-decoration: none;
