@@ -6,6 +6,9 @@ function createGameboard() {
     var size = gameboardSize(); 
     var colorChange = 10;
 
+    // RGB color pallette
+    var r, g, b;
+
     var width = 500, 
         height = 500;
 
@@ -28,13 +31,13 @@ function createGameboard() {
             squareDiv.style.backgroundColor = '#fff';  
 
             // set width and height of squares
-            squareDiv.style.width = Math.round(width / size).toString() + "px";
-            squareDiv.style.height= Math.round(height / size).toString()+"px";
+            squareDiv.style.width = (width / size).toString() + "px";
+            squareDiv.style.height= (height / size).toString()+"px";
 
             gameboard.appendChild(squareDiv);
 
-            squareDiv.addEventListener('mouseover', function(event){
-            	event.target.style.backgroundColor ='#000';                 
+            squareDiv.addEventListener('mouseover', function(e){
+            	e.target.style.backgroundColor = 'rgb(' + randomColor(r,g,b) + ')';                
             });
 	  	}
 	  	//gameboard.appendChild(squareDiv);
@@ -54,7 +57,13 @@ function gameboardSize() {
 }
 
 function randomColor() {
-    // soon
+	var colorArray = [
+	r = Math.floor(Math.random() * 255),
+	g = Math.floor(Math.random() * 255),
+	b = Math.floor(Math.random() * 255)
+	];
+
+	return colorArray.toString();
 }
 
 // Refreshes Chrome

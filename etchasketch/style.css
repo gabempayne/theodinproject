@@ -2,12 +2,13 @@
    font-size: 0;
     position: relative;
     margin: 0 auto;
+    border: solid black 1px;
 }
 
 .square {
 	display: inline-block;
-	border: solid black 3px;
-
+	border: solid black 0px;
+	box-sizing: border-box;
 }
 
 .square:hover {
@@ -15,19 +16,14 @@
 }
 
 #reset-button {
-    background-color: #4CAF50;
+	background-color: #4CAF50;
     border: none;
     color: white;
     text-decoration: none;
     font-size: 16px;
     padding: 10px;
-  /*  left: 30%;
-    right: auto;*/
-    text-align: center;
-    position: absolute;
-	bottom: -43px;
-	left: 31%;
-    
+    margin: 0 auto;
+    display: block;
 }
 
 header {
