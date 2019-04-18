@@ -1,6 +1,4 @@
 #game-board {
-    margin: 20px auto;
-	border-radius: 4px;
 	text-align: center;
 	padding: 15px 20px;
 	position: relative;
@@ -27,11 +25,12 @@
     text-decoration: none;
     font-size: 16px;
     padding: 10px;
-    left: 30%;
-    right: auto;
-    top: 26%;
+  /*  left: 30%;
+    right: auto;*/
     text-align: center;
-    position: relative;
+    position: absolute;
+	bottom: -43px;
+	left: 31%;
     
 }
 
