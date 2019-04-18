@@ -3,13 +3,14 @@ const reset = document.getElementById("reset-button");
 
 function createGameboard() {
 	// User-generated gameboard Size
-    var size = gameboardSize();  
+    var size = gameboardSize(); 
+    var colorChange = 10;
 
     var width = 500, 
         height = 500;
 
-    gameboard.style.width = width;
-    gameboard.style.height = height;
+    gameboard.style.width = width + 'px';
+    gameboard.style.height = height + 'px';
 
     // Reset button width
     reset.style.width = width.toString() + "px";
@@ -33,7 +34,7 @@ function createGameboard() {
             gameboard.appendChild(squareDiv);
 
             squareDiv.addEventListener('mouseover', function(event){
-                event.target.style.backgroundColor ='#000';                         
+            	event.target.style.backgroundColor ='#000';                 
             });
 	  	}
 	  	//gameboard.appendChild(squareDiv);
@@ -45,8 +46,11 @@ function createGameboard() {
 // Prompt user for gameboard size; returns gameboard
 function gameboardSize() {
     var size = prompt("Enter gameboard size");
-
-	return size;
+    if(size != 0) {
+    	return size;
+    } else {
+    	resetGame();
+    }
 }
 
 function randomColor() {
