@@ -6,9 +6,6 @@ function createGameboard() {
     var size = gameboardSize(); 
     var colorChange = 10;
 
-    // RGB color pallette
-    var r, g, b;
-
     var width = 500, 
         height = 500;
 
@@ -37,7 +34,7 @@ function createGameboard() {
             gameboard.appendChild(squareDiv);
 
             squareDiv.addEventListener('mouseover', function(e){
-            	e.target.style.backgroundColor = 'rgb(' + randomColor(r,g,b) + ')';                
+            	e.target.style.backgroundColor = randomColor() ;                
             });
 	  	}
 	  	//gameboard.appendChild(squareDiv);
@@ -63,7 +60,7 @@ function randomColor() {
 	b = Math.floor(Math.random() * 255)
 	];
 
-	return colorArray.toString();
+	return 'rgb(' + colorArray.toString()+ ')';
 }
 
 // Refreshes Chrome
