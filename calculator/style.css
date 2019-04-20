@@ -1,0 +1,19 @@
+.main-container {
+	width: 500px;
+	height: 750px;
+}
+.digital-container {
+	padding: 10px;
+}
+
+.operator-container {
+	padding-top: 2px;
+}
+
+#button {
+	color: white;
+	background-color: black;
+	height: 50px;
+	width: 50px;
+	border: none;
+}
