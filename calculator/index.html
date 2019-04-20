@@ -5,30 +5,29 @@
 	<title>Quakulator</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="app.js"></script>
-	<div class="main-container">
-		<input type="text" name="output">
-		<div class="digit-container">
-						<button id="button">7</button>
-			<button id="button">8</button>
-			<button id="button">9</button>
-			<button id="button">0</button>
-			<button id="button">1</button>
-			<button id="button">2</button>
-			<button id="button">3</button>
-			<button id="button">4</button>
-			<button id="button">5</button>
-			<button id="button">6</button>
-			<button id="button">7</button>
-			<button id="button">8</button>
-			<button id="button">9</button>
+	<div id="main-container">
+		<input id="output-box" type="text" name="output">
+		<div id="digit-container">
+			<button id="seven">7</button>
+			<button id="eight">8</button>
+			<button id="nine">9</button>
+			<button id="four">4</button>
+			<button id="five">5</button>
+			<button id="six">6</button>
+			<button id="one">1</button>
+			<button id="two">2</button>
+			<button id="three">3</button>
+			<button id="clear">CLEAR</button>
+			<button id="zero">0</button>
+			<button id="equals"><i class="fas fa-equals"></i></button>
 		</div>
-		<div class="operator-container">
-			<button id="button"><i class="fas fa-divide"></i></button>
-			<button id="button"><i class="fas fa-times"></i></button>
-			<button id="button"><i class="fas fa-minus"></i></button>
-			<button id="button"><i class="fas fa-plus"></i></button>
-			<button id="button"><i class="fas fa-equals"></i></button>
+		<div class="btn-group-vertical" id="operator-container">
+			<button id="divide"><i class="fas fa-divide"></i></button>
+			<button id="times"><i class="fas fa-times"></i></button>
+			<button id="minus"><i class="fas fa-minus"></i></button>
+			<button id="plus"><i class="fas fa-plus"></i></button>			
 		</div>
 	</div>
 </head>
