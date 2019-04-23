@@ -1,4 +1,4 @@
-const outputBox = document.getElementById('output-box');
+let outputBox = document.getElementById('output-box');
 const sevenBtn = document.getElementById('seven');
 const eightBtn = document.getElementById('eight');
 const nineBtn = document.getElementById('nine');
@@ -14,6 +14,7 @@ const divideBtn = document.getElementById('equals');
 const timesBtn = document.getElementById('times');
 const minusBtn = document.getElementById('minus');
 const plusBtn = document.getElementById('plus');
+const buttons = document.getElementsByTagName('button');
 
 
 // Add function
@@ -36,9 +37,16 @@ function divide(a, b) {
 function operate(operator, a, b) {
 
 }
+// failed button click function
+function btnClix() {
+	for(var i = 0; i < buttons.length; i++){
+		buttons[i].addEventListener('click', function() {
+			console.log(buttons[i].textContent);
+		});
+	}
+}
 
-
-
-
-
-// main();
+// testing checking button textContent
+for(var i = 0; i < buttons.length; i++){
+	console.log(buttons[i].textContent);
+}
