@@ -37,9 +37,7 @@ function operate(operator, a, b) {
 
 }
 
-sevenBtn.click(function() {
-	outputBox.value = 'help';
-});
+
 
 
 
