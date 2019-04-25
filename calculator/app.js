@@ -7,10 +7,10 @@ const sixBtn = document.getElementById('five');
 const oneBtn = document.getElementById('six');
 const twoBtn = document.getElementById('one');
 const threeBtn = document.getElementById('two');
-const clearBtn = document.getElementById('three');
-const zeroBtn = document.getElementById('clear');
-const equalsBtn = document.getElementById('zero');
-const divideBtn = document.getElementById('equals');
+const clearBtn = document.getElementById('clear');
+const zeroBtn = document.getElementById('zero');
+const equalsBtn = document.getElementById('equals');
+const divideBtn = document.getElementById('divide');
 const timesBtn = document.getElementById('times');
 const minusBtn = document.getElementById('minus');
 const plusBtn = document.getElementById('plus');
@@ -40,12 +40,27 @@ function operate(operator, a, b) {
 // failed button click function
 
 sevenBtn.addEventListener('click', function() {
-	console.log('hi');	
+	outputBox.value = 7;
+});
+eightBtn.addEventListener('click', function() {
+	outputBox.value = 8;
+});
+sevenBtn.addEventListener('click', function() {
+	outputBox.value = 7;
+});
+sevenBtn.addEventListener('click', function() {
+	outputBox.value = 7;
+});
+sevenBtn.addEventListener('click', function() {
+	outputBox.value = 7;
+});
+sevenBtn.addEventListener('click', function() {
+	outputBox.value = 7;
 });
 
 
 clearBtn.addEventListener('click', function() {
-	outputBox.textContent = '';
+	outputBox.value = 0;
 });
 
 // testing checking button textContent
