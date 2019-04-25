@@ -3,10 +3,11 @@ const sevenBtn = document.getElementById('seven');
 const eightBtn = document.getElementById('eight');
 const nineBtn = document.getElementById('nine');
 const fourBtn = document.getElementById('four');
-const sixBtn = document.getElementById('five');
-const oneBtn = document.getElementById('six');
-const twoBtn = document.getElementById('one');
-const threeBtn = document.getElementById('two');
+const fiveBtn = document.getElementById('five');
+const sixBtn = document.getElementById('six');
+const oneBtn = document.getElementById('one');
+const twoBtn = document.getElementById('two');
+const threeBtn = document.getElementById('three');
 const clearBtn = document.getElementById('clear');
 const zeroBtn = document.getElementById('zero');
 const equalsBtn = document.getElementById('equals');
@@ -38,30 +39,48 @@ function operate(operator, a, b) {
 
 }
 // failed button click function
-
 sevenBtn.addEventListener('click', function() {
 	outputBox.value = 7;
 });
 eightBtn.addEventListener('click', function() {
 	outputBox.value = 8;
 });
-sevenBtn.addEventListener('click', function() {
-	outputBox.value = 7;
+nineBtn.addEventListener('click', function() {
+	outputBox.value = 9;
 });
-sevenBtn.addEventListener('click', function() {
-	outputBox.value = 7;
+fourBtn.addEventListener('click', function() {
+	outputBox.value = 4;
 });
-sevenBtn.addEventListener('click', function() {
-	outputBox.value = 7;
+fiveBtn.addEventListener('click', function() {
+	outputBox.value = 5;
 });
-sevenBtn.addEventListener('click', function() {
-	outputBox.value = 7;
+sixBtn.addEventListener('click', function() {
+	outputBox.value = 6;
 });
-
-
+oneBtn.addEventListener('click', function() {
+	outputBox.value = 1;
+});
+twoBtn.addEventListener('click', function() {
+	outputBox.value = 2;
+});
+threeBtn.addEventListener('click', function() {
+	outputBox.value = 3;
+});
+zeroBtn.addEventListener('click', function() {
+	outputBox.value = 0;
+});
 clearBtn.addEventListener('click', function() {
 	outputBox.value = 0;
 });
+
+// operator listeners 
+// equalsBtn.addEventListener('click', function() {
+// 	outputBox.value = 0;
+// });
+// threeBtn.addEventListener('click', function() {
+// 	outputBox.value = 3;
+// });
+
 
 // testing checking button textContent
 for(var i = 0; i < buttons.length; i++){
