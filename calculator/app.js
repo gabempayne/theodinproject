@@ -38,13 +38,15 @@ function operate(operator, a, b) {
 
 }
 // failed button click function
-function btnClix() {
-	for(var i = 0; i < buttons.length; i++){
-		buttons[i].addEventListener('click', function() {
-			console.log(buttons[i].textContent);
-		});
-	}
-}
+
+sevenBtn.addEventListener('click', function() {
+	console.log('hi');	
+});
+
+
+clearBtn.addEventListener('click', function() {
+	outputBox.textContent = '';
+});
 
 // testing checking button textContent
 for(var i = 0; i < buttons.length; i++){
