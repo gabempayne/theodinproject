@@ -38,51 +38,11 @@ function divide(a, b) {
 function operate(operator, a, b) {
 
 }
-// failed button click function
-sevenBtn.addEventListener('click', function() {
-	outputBox.value = 7;
-});
-eightBtn.addEventListener('click', function() {
-	outputBox.value = 8;
-});
-nineBtn.addEventListener('click', function() {
-	outputBox.value = 9;
-});
-fourBtn.addEventListener('click', function() {
-	outputBox.value = 4;
-});
-fiveBtn.addEventListener('click', function() {
-	outputBox.value = 5;
-});
-sixBtn.addEventListener('click', function() {
-	outputBox.value = 6;
-});
-oneBtn.addEventListener('click', function() {
-	outputBox.value = 1;
-});
-twoBtn.addEventListener('click', function() {
-	outputBox.value = 2;
-});
-threeBtn.addEventListener('click', function() {
-	outputBox.value = 3;
-});
-zeroBtn.addEventListener('click', function() {
-	outputBox.value = 0;
-});
-clearBtn.addEventListener('click', function() {
-	outputBox.value = 0;
-});
-
-// operator listeners 
-// equalsBtn.addEventListener('click', function() {
-// 	outputBox.value = 0;
-// });
-// threeBtn.addEventListener('click', function() {
-// 	outputBox.value = 3;
-// });
-
-
-// testing checking button textContent
-for(var i = 0; i < buttons.length; i++){
-	console.log(buttons[i].textContent);
+// better method of creating event listeners
+var btns = document.querySelectorAll('button');
+for (var i = 0; i < btns.length; i++) {
+	console.log('1', btns[i]);
+	btns[i].addEventListener('click', function (event) {
+	outputBox.value += event.target.textContent;
+	}, false);
 }
