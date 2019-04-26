@@ -15,7 +15,7 @@ const divideBtn = document.getElementById('divide');
 const timesBtn = document.getElementById('times');
 const minusBtn = document.getElementById('minus');
 const plusBtn = document.getElementById('plus');
-const buttons = document.getElementsByTagName('button');
+var buttons = document.querySelectorAll('button');
 
 
 // Add function
@@ -39,10 +39,8 @@ function operate(operator, a, b) {
 
 }
 // better method of creating event listeners
-var btns = document.querySelectorAll('button');
-for (var i = 0; i < btns.length; i++) {
-	console.log('1', btns[i]);
-	btns[i].addEventListener('click', function (event) {
+for (var i = 0; i < buttons.length; i++) {
+	buttons[i].addEventListener('click', function (event) {
 	outputBox.value += event.target.textContent;
 	}, false);
 }
