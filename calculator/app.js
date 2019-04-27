@@ -36,11 +36,27 @@ function divide(a, b) {
 }
 
 function operate(operator, a, b) {
+	if(operator == "x"){
+		multi(a, b);
+	}
+	if(operator == "/"){
+		divide(a, b);
+	}
+	if(operator == "+"){
+		add(a, b);
+	}
+	if(operator == "-"){
+		sub(a, b);
+	}
 
 }
+
+function buttonClicks() {
+	var operator;
 // better method of creating event listeners
-for (var i = 0; i < buttons.length; i++) {
-	buttons[i].addEventListener('click', function (event) {
-	outputBox.value += event.target.textContent;
-	}, false);
+	for (var i = 0; i < buttons.length; i++) {
+		buttons[i].addEventListener('click', function (event) {
+		outputBox.value += event.target.textContent;
+		}, false);
+	}
 }
