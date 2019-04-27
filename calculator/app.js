@@ -53,10 +53,26 @@ function operate(operator, a, b) {
 
 function buttonClicks() {
 	var operator;
+	var a, b;
+
 // better method of creating event listeners
 	for (var i = 0; i < buttons.length; i++) {
 		buttons[i].addEventListener('click', function (event) {
-		outputBox.value += event.target.textContent;
+
+			if(buttons[i].textContent === "/"){
+				console.log('fart');
+
+			}else if(buttons[i].textContent === "X"){
+				console.log('fart');
+			}else if(buttons[i].textContent === "+"){
+				console.log('fart');
+			}else if(buttons[i].extContent === "-"){
+				console.log('fart');
+			}
+			else{
+				outputBox.value += event.target.textContent;
+			}
+
 		}, false);
 	}
 }
