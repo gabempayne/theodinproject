@@ -51,7 +51,7 @@ function operate(operator, a, b) {
 
 }
 
-function buttonClicks() {
+function main() {
 	var operator;
 	var a, b;
 
@@ -92,4 +92,4 @@ function buttonClicks() {
 		}, false);
 	}
 } 
-buttonClicks();
+main();
