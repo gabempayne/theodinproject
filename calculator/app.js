@@ -59,22 +59,30 @@ function buttonClicks() {
 	for (var i = 0; i < buttons.length; i++) {
 		buttons[i].addEventListener('click', function (event) {
 
-			if(event.id === "/"){
-				console.log('fart');
-
-			}else if(event.target.id === "divide"){
+			if(event.target.id === "divide"){
+				a = parseInt(outputBox.value);
+				console.log(a);
 				operator = "/";
 			}else if(event.target.id === "times"){
+				a = parseInt(outputBox.value);
 				operator = "X";
 			}else if(event.target.id === "minus"){
+				a = parseInt(outputBox.value);
 				operator = "-";
 			}else if(event.target.id === "plus"){
+				a = parseInt(outputBox.value);
 				operator = "+";
 			}else if(event.target.id === "clear"){
 				outputBox.value = "0";
 			}
+			else if(event.target.id === "equals"){
+				b = parseInt(outputBox.value);
+				console.log(b);
+				console.log(a);
+				console.log(operate(operator, a, b));
+			}
 			else{
-				if(outputBox.value == "0"){
+				if(outputBox.value == "0" || typeof a != 'undefined'){
 					outputBox.value = event.target.textContent;
 				} else {
 					outputBox.value += event.target.textContent;
