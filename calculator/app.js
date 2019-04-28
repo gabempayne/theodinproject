@@ -48,13 +48,10 @@ function operate(operator, a, b) {
 	if(operator == "-"){
 		sub(a, b);
 	}
-
 }
-
 function main() {
 	var operator;
 	var a, b;
-
 // better method of creating event listeners
 	for (var i = 0; i < buttons.length; i++) {
 		buttons[i].addEventListener('click', function (event) {
@@ -88,7 +85,6 @@ function main() {
 					outputBox.value += event.target.textContent;
 				}
 			}
-
 		}, false);
 	}
 } 
