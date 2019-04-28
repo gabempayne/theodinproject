@@ -59,20 +59,29 @@ function buttonClicks() {
 	for (var i = 0; i < buttons.length; i++) {
 		buttons[i].addEventListener('click', function (event) {
 
-			if(buttons[i].textContent === "/"){
+			if(event.id === "/"){
 				console.log('fart');
 
-			}else if(buttons[i].textContent === "X"){
-				console.log('fart');
-			}else if(buttons[i].textContent === "+"){
-				console.log('fart');
-			}else if(buttons[i].extContent === "-"){
-				console.log('fart');
+			}else if(event.target.id === "divide"){
+				operator = "/";
+			}else if(event.target.id === "times"){
+				operator = "X";
+			}else if(event.target.id === "minus"){
+				operator = "-";
+			}else if(event.target.id === "plus"){
+				operator = "+";
+			}else if(event.target.id === "clear"){
+				outputBox.value = "0";
 			}
 			else{
-				outputBox.value += event.target.textContent;
+				if(outputBox.value == "0"){
+					outputBox.value = event.target.textContent;
+				} else {
+					outputBox.value += event.target.textContent;
+				}
 			}
 
 		}, false);
 	}
-}
+} 
+buttonClicks();
