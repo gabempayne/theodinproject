@@ -58,11 +58,10 @@ function main() {
 
 			if(event.target.id === "divide"){
 				a = parseInt(outputBox.value);
-				console.log(a);
 				operator = "/";
 			}else if(event.target.id === "times"){
 				a = parseInt(outputBox.value);
-				operator = "X";
+				operator = "x";
 			}else if(event.target.id === "minus"){
 				a = parseInt(outputBox.value);
 				operator = "-";
