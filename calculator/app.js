@@ -37,16 +37,16 @@ function divide(a, b) {
 
 function operate(operator, a, b) {
 	if(operator == "x"){
-		multi(a, b);
+		return multi(a, b);
 	}
 	if(operator == "/"){
-		divide(a, b);
+		return divide(a, b);
 	}
 	if(operator == "+"){
-		add(a, b);
+		return add(a, b);
 	}
 	if(operator == "-"){
-		sub(a, b);
+		return sub(a, b);
 	}
 }
 function main() {
@@ -74,9 +74,7 @@ function main() {
 			}
 			else if(event.target.id === "equals"){
 				b = parseInt(outputBox.value);
-				console.log(b);
-				console.log(a);
-				console.log(operate(operator, a, b));
+				outputBox.value = operate(operator, a, b);
 			}
 			else{
 				if(outputBox.value == "0" || typeof a != 'undefined'){
