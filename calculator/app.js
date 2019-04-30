@@ -75,12 +75,10 @@ function main() {
 				b = parseInt(outputBox.value);
 				outputBox.value = operate(operator, a, b);
 			}
-			else{
-				if(outputBox.value == "0" || typeof a != 'undefined'){
-					outputBox.value = event.target.textContent;
-				} else {
-					outputBox.value += event.target.textContent;
-				}
+			else if(outputBox.value == "0" || typeof a != 'undefined'){
+				outputBox.value = event.target.textContent;
+			} else {
+				outputBox.value += event.target.textContent;				
 			}
 		}, false);
 	}
