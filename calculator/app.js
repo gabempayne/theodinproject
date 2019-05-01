@@ -20,73 +20,78 @@ var buttons = document.querySelectorAll('button');
 
 // Add function
 function add(a, b) {
-	return a + b;
+  return a + b;
 }
 // Sub function
 function sub(a, b) {
-	return a - b;
+  return a - b;
 }
 // Multi function
 function multi(a, b) {
-	return a * b;
+  return a * b;
 }
 // Division function
-function divide(a, b) {	
-	return a / b;	
+function divide(a, b) {
+  return a / b;
 }
 
 function operate(operator, a, b) {
-	if(operator == "x"){
-		return multi(a, b);
-	} 
-	if(operator == "/"){
-		if(b != 0){
-			return divide(a, b);
-		} else {
-			prompt('You can never divide by zero');
-		}
-	}
-	if(operator == "+"){
-		return add(a, b);
-	}
-	if(operator == "-"){
-		return sub(a, b);
-	}
+  if (operator == "x") {
+    return multi(a, b);
+  }
+  if (operator == "/") {
+    if (b != 0) {
+      return divide(a, b);
+    } else {
+      prompt('You can never divide by zero');
+    }
+  }
+  if (operator == "+") {
+    return add(a, b);
+  }
+  if (operator == "-") {
+    return sub(a, b);
+  }
 }
 function main() {
-	var operator;
-	var a, b;
-// better method of creating event listeners
-	for (var i = 0; i < buttons.length; i++) {
-		buttons[i].addEventListener('click', function (event) {
+  var operator;
+  var a, b;
+  // better method of creating event listeners
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function (event) {
 
-			if(event.target.id === "divide"){
-				a = parseInt(outputBox.value);
-				operator = "/";
-			}else if(event.target.id === "times"){
-				a = parseInt(outputBox.value);
-				operator = "x";
-			}else if(event.target.id === "minus"){
-				a = parseInt(outputBox.value);
-				operator = "-";
-			}else if(event.target.id === "plus"){
-				a = parseInt(outputBox.value);
-				operator = "+";
-			}else if(event.target.id === "clear"){
-				outputBox.value = "0";
-			}
-			else if(event.target.id === "equals"){
-				b = parseInt(outputBox.value);
-				outputBox.value = operate(operator, a, b);
-			}
-			else{
-				if(outputBox.value == "0" || typeof a != 'undefined'){
-					outputBox.value = event.target.textContent;
-				} else {
-					outputBox.value += event.target.textContent;
-				}
-			}
-		}, false);
-	}
-} 
+      if (event.target.id === "divide") {
+        a = parseInt(outputBox.value);
+        operator = "/";
+      } else if (event.target.id === "times") {
+        a = parseInt(outputBox.value);
+        operator = "x";
+      } else if (event.target.id === "minus") {
+        a = parseInt(outputBox.value);
+        operator = "-";
+      } else if (event.target.id === "plus") {
+        a = parseInt(outputBox.value);
+        operator = "+";
+      } else if (event.target.id === "clear") {
+        outputBox.value = "0";
+        a = 0;
+        b = 0;
+      }
+      else if (event.target.id === "equals") {
+        b = parseInt(outputBox.value);
+        outputBox.value = operate(operator, a, b);
+      }
+      else {
+        console.log('start: ', outputBox.value, a, b, operator);
+
+        if (outputBox.value == a ) {
+          outputBox.value = event.target.textContent;
+        } else {
+          outputBox.value += event.target.textContent;
+        }
+        console.log('end: ', outputBox.value, a, b, operator);
+      }
+    }, false);
+  }
+}
 main();
