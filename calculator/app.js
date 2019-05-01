@@ -31,16 +31,20 @@ function multi(a, b) {
 	return a * b;
 }
 // Division function
-function divide(a, b) {
-	return a / b;
+function divide(a, b) {	
+	return a / b;	
 }
 
 function operate(operator, a, b) {
 	if(operator == "x"){
 		return multi(a, b);
-	}
+	} 
 	if(operator == "/"){
-		return divide(a, b);
+		if(b != 0){
+			return divide(a, b);
+		} else {
+			prompt('You can never divide by zero');
+		}
 	}
 	if(operator == "+"){
 		return add(a, b);
@@ -75,10 +79,12 @@ function main() {
 				b = parseInt(outputBox.value);
 				outputBox.value = operate(operator, a, b);
 			}
-			else if(outputBox.value == "0"|| typeof a != 'undefined') {
-				outputBox.value = event.target.textContent;
-			} else if(typeof b === 'undefined'|| typeof a === 'undefined') {
-				outputBox.value += event.target.textContent;				
+			else{
+				if(outputBox.value == "0" || typeof a != 'undefined'){
+					outputBox.value = event.target.textContent;
+				} else {
+					outputBox.value += event.target.textContent;
+				}
 			}
 		}, false);
 	}
