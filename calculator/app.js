@@ -1,4 +1,3 @@
-let outputBox = document.getElementById('output-box');
 const sevenBtn = document.getElementById('seven');
 const eightBtn = document.getElementById('eight');
 const nineBtn = document.getElementById('nine');
@@ -16,6 +15,7 @@ const timesBtn = document.getElementById('times');
 const minusBtn = document.getElementById('minus');
 const plusBtn = document.getElementById('plus');
 var buttons = document.querySelectorAll('button');
+let outputBox = document.getElementById('output-box');
 
 
 // Add function
@@ -53,10 +53,12 @@ function operate(operator, a, b) {
     return sub(a, b);
   }
 }
+
 function main() {
   var operator;
   var a, b;
-  // better method of creating event listeners
+
+  // loop to create listeners for each button
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function (event) {
 
@@ -80,11 +82,13 @@ function main() {
       else if (event.target.id === "equals") {
         b = parseInt(outputBox.value);
         outputBox.value = operate(operator, a, b);
+        a = 0;
+        b = 0;
       }
       else {
         console.log('start: ', outputBox.value, a, b, operator);
 
-        if (outputBox.value == a ) {
+        if (outputBox.value == "0" || outputBox.value == a ) {
           outputBox.value = event.target.textContent;
         } else {
           outputBox.value += event.target.textContent;
