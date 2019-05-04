@@ -35,6 +35,7 @@ function divide(a, b) {
   return a / b;
 }
 
+// Operator function
 function operate(operator, a, b) {
   if (operator == "x") {
     return multi(a, b);
@@ -54,6 +55,7 @@ function operate(operator, a, b) {
   }
 }
 
+// Main function
 function main() {
   var operator;
   var a, b;
