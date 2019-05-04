@@ -1,0 +1,5 @@
+//if listener is pushed
+	//if a exists
+		//add textContent to a and textContent becomes a
+		// repeat indefinitely 
+		
