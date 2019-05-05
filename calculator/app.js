@@ -44,7 +44,7 @@ function operate(operator, a, b) {
     if (b != 0) {
       return divide(a, b);
     } else {
-      prompt('You can never divide by zero');
+      alert('You can never divide by zero');
     }
   }
   if (operator == "+") {
@@ -58,34 +58,51 @@ function operate(operator, a, b) {
 // Main function
 function main() {
   var operator;
+  var hasBeenChecked = false;
   var a, b;
 
   // loop to create listeners for each button
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function (event) {
 
-      if (event.target.id === "divide") {
-      	// potential if-statement 
-      	// default condition works fine
-      	if(!a) {
-      		a = Number(outputBox.value);
-        	operator = "/";
-      	} else {
-        	b = parseInt(outputBox.value);      		
-      		a = Number(outputBox.value);
-      		operator = "/";
-      		outputBox.value = operate(operator, a, b);
-      	}
-       
+      if (event.target.id === "divide" ) {
+        if(!a){
+          a = parseInt(outputBox.value);
+          operator = "/";
+        } else {
+          b = parseInt(outputBox.value);
+          outputBox.value = operate(operator, a, b);
+          a = parseInt(outputBox.value);
+          hasBeenChecked = true;
+        }
+        hasBeenChecked = false;
       } else if (event.target.id === "times") {
-        a = Number(outputBox.value);
-        operator = "x";
+        if(!a){
+          a = parseInt(outputBox.value);
+          operator = "x";
+        } else {
+          b = parseInt(outputBox.value);
+          outputBox.value = operate(operator, a, b);
+          a = parseInt(outputBox.value);
+        }
       } else if (event.target.id === "minus") {
-        a = Number(outputBox.value);
-        operator = "-";
+        if(!a){
+          a = parseInt(outputBox.value);
+          operator = "-";
+        } else {
+          b = parseInt(outputBox.value);
+          outputBox.value = operate(operator, a, b);
+          a = parseInt(outputBox.value);
+        }
       } else if (event.target.id === "plus") {
-        a = Number(outputBox.value);
-        operator = "+";
+        if(!a){
+          a = parseInt(outputBox.value);
+          operator = "+";
+        } else {
+          b = parseInt(outputBox.value);
+          outputBox.value = operate(operator, a, b);
+          a = parseInt(outputBox.value);
+        }
       } else if (event.target.id === "clear") {
         outputBox.value = "0";
         a = 0;
