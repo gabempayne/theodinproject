@@ -65,16 +65,26 @@ function main() {
     buttons[i].addEventListener('click', function (event) {
 
       if (event.target.id === "divide") {
-        a = parseInt(outputBox.value);
-        operator = "/";
+      	// potential if-statement 
+      	// default condition works fine
+      	if(!a) {
+      		a = Number(outputBox.value);
+        	operator = "/";
+      	} else {
+        	b = parseInt(outputBox.value);      		
+      		a = Number(outputBox.value);
+      		operator = "/";
+      		outputBox.value = operate(operator, a, b);
+      	}
+       
       } else if (event.target.id === "times") {
-        a = parseInt(outputBox.value);
+        a = Number(outputBox.value);
         operator = "x";
       } else if (event.target.id === "minus") {
-        a = parseInt(outputBox.value);
+        a = Number(outputBox.value);
         operator = "-";
       } else if (event.target.id === "plus") {
-        a = parseInt(outputBox.value);
+        a = Number(outputBox.value);
         operator = "+";
       } else if (event.target.id === "clear") {
         outputBox.value = "0";
@@ -84,8 +94,6 @@ function main() {
       else if (event.target.id === "equals") {
         b = parseInt(outputBox.value);
         outputBox.value = operate(operator, a, b);
-        a = 0;
-        b = 0;
       }
       else {
         console.log('start: ', outputBox.value, a, b, operator);
