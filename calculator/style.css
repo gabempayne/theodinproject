@@ -4,12 +4,12 @@
 	background-color: #0849b2;
 	padding: 10px 10px 10px 10px;
 	position: relative;
-    margin: 10px auto;
+    margin: 10px auto;    
+	border: none;
 }
 #digit-container {
 	width: 174px;
 	float:left;
-
 }
 
 #operator-container {   
@@ -18,8 +18,7 @@
 
 button {
 	border: 1px solid red;
-	color: #000;
-	background-color: #fff;
+	background-color: #f2f2f2;
 	height: 40px;
 	width: 55px;
 	padding: 0px 25px 25px 1px;
@@ -33,4 +32,7 @@ button {
 	text-align: right;
 	margin-bottom: 50px;
 	font-size: 25px;
+	background-color: #756553;
+	border: none;
+	padding: 5px;
 }
