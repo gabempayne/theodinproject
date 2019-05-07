@@ -54,17 +54,14 @@ function operate(operator, a, b) {
     return sub(a, b);
   }
 }
-
 // Main function
 function main() {
   var operator;
-  var hasBeenChecked = false;
+  var isChecked = false; // possible bool to determine if checked
   var a, b;
-
   // loop to create listeners for each button
   for (var i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', function (event) {
-
+    buttons[i].addEventListener('click', function clicker (event) {
       if (event.target.id === "divide" ) {
         if(!a){
           a = parseInt(outputBox.value);
@@ -73,9 +70,9 @@ function main() {
           b = parseInt(outputBox.value);
           outputBox.value = operate(operator, a, b);
           a = parseInt(outputBox.value);
-          hasBeenChecked = true;
+          isChecked = true;
         }
-        hasBeenChecked = false;
+        isChecked = false;
       } else if (event.target.id === "times") {
         if(!a){
           a = parseInt(outputBox.value);
@@ -103,7 +100,7 @@ function main() {
           outputBox.value = operate(operator, a, b);
           a = parseInt(outputBox.value);
         }
-      } else if (event.target.id === "clear") {
+      } else if (event.target.id === "clear") {        
         outputBox.value = "0";
         a = 0;
         b = 0;
@@ -111,16 +108,16 @@ function main() {
       else if (event.target.id === "equals") {
         b = parseInt(outputBox.value);
         outputBox.value = operate(operator, a, b);
+        a = 0;
+        b = 0;
       }
       else {
         console.log('start: ', outputBox.value, a, b, operator);
-
         if (outputBox.value == "0" || outputBox.value == a ) {
           outputBox.value = event.target.textContent;
         } else {
           outputBox.value += event.target.textContent;
         }
-        console.log('end: ', outputBox.value, a, b, operator);
       }
     }, false);
   }
