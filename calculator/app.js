@@ -10,6 +10,7 @@ const threeBtn = document.getElementById('three');
 const clearBtn = document.getElementById('clear');
 const zeroBtn = document.getElementById('zero');
 const equalsBtn = document.getElementById('equals');
+const decimal = document.getElementById('decimal');
 const divideBtn = document.getElementById('divide');
 const timesBtn = document.getElementById('times');
 const minusBtn = document.getElementById('minus');
@@ -110,6 +111,26 @@ function main() {
         outputBox.value = operate(operator, a, b);
         a = 0;
         b = 0;
+      }
+      else if (event.target.id === "decimal") {
+        if(outputBox.value.contains('.')) {
+        	console.log('yes');
+        }else {
+        	outputBox.value += '.';
+        }
+        
+      }
+      // Broken, but you get the idea. 
+      // Luckily this is extra credit
+      else if (event.target.id === "backspace") {
+        
+        if(a) {
+        	outputbox.value = outputbox.value.replace(outputBox.value[outputbox.length - 1],'');
+        	b = parseInt(outputBox.value);
+        }else {
+        	outputbox.value.replace(outputBox.value[outputbox.length - 1],'');
+        	a = parseInt(outputBox.value);
+        }
       }
       else {
         console.log('start: ', outputBox.value, a, b, operator);
