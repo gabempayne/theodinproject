@@ -107,19 +107,23 @@ function main() {
         b = 0;
       }
       else if (event.target.id === "equals") {
-        b = parseInt(outputBox.value);
-        outputBox.value = operate(operator, a, b);
-        a = 0;
-        b = 0;
+      	if(b == 'undefined') {
+      		outputBox.value = a;
+      	}else {
+      		b = parseInt(outputBox.value);
+        	outputBox.value = operate(operator, a, b);        	
+      	}
+      	a = 0;
+        b = 0;     
       }
-      else if (event.target.id === "decimal") {
-        if(outputBox.value.contains('.')) {
-        	console.log('yes');
-        }else {
-        	outputBox.value += '.';
-        }
+      // else if (event.target.id === "decimal") {
+      //   if(outputBox.value.contains('.')) {
+      //   	console.log('yes');
+      //   }else {
+      //   	outputBox.value += '.';
+      //   }
         
-      }
+      // }
       // Broken, but you get the idea. 
       // Luckily this is extra credit
       else if (event.target.id === "backspace") {

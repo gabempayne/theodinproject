@@ -1,5 +1,7 @@
-//if listener is pushed
+//if operator listener is pushed
 	//if a exists
 		//add textContent to a and textContent becomes a
 		// repeat indefinitely 
-		
+
+//if equals listener is pushed
+	//repeat equals indefinitely
