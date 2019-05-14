@@ -1,0 +1,71 @@
+/*
+ * 	Media Queries & Responsive Grid
+ *		David Cochran 2011 
+*/
+
+/* Experimental Basic Grid */
+
+	.container {
+		background: hsla(270,60%, 40%, 0.2);		
+		margin: 0 40px;
+	}
+	.row {
+		margin-left: -3%;
+	}
+	[class*="span"] {
+		display: inline;
+		float: left;
+		margin-left: 3%;
+	} 
+	.span-one-third {
+		width: 30%;
+	}
+
+
+
+/* OTHER STYLES -- NOT TOUCHED IN THIS EXERCISE */
+
+	html, body {
+		background-color: #ffffff;
+	}
+	body {
+		margin: 0;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: 13px;
+		font-weight: normal;
+		line-height: 1.3;
+		color: #404040;
+		}
+	hgroup {
+		margin: 60px 0 40px;	
+		} 
+	hgroup h1 {
+		font-size: 300%;
+		margin: 0;
+		padding: 0;
+	}
+	h1, h2 {
+		line-height: 1;
+		}
+	a {
+		color: blue;
+		text-decoration: none;
+		}
+	a:hover {
+		text-decoration: underline;
+		}
+	#siteinfo {
+		padding-top: 40px;
+		color: #555;
+		font-weight: bold;
+		opacity: 0.7;
+	}
+	#siteinfo:hover {
+		opacity: 1;	
+	}
+
+	/* Clearfix -- h5bp.com/q 
+	-------------------------------- */
+	.clearfix:before, .clearfix:after { content: ""; display: table; }
+	.clearfix:after { clear: both; }
+	.clearfix { zoom: 1; }
