@@ -1,10 +1,567 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Smashing</title>
-</head>
-<body>
-	
-</body>
-</html>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Smashing</title>
+
+<body class="homepage enhanced js contrast no-panels anonymous non-subscriber" id="home">
+
+    <header class="main-header block" data-handler="MenuButton">
+        <div class="container--header">
+            <div class="header__head" role="navigation">
+                <div class="menu-button-and-menu">
+                </div>
+                <div class="search-topics-dropdown container--header closed" id="header-dropdown">
+                    <div class="header__search">
+                        <form data-handler="Search" id="js-search-form" class="search-form" method="get" action="https://www.google.com/webhp?q=site:smashingmagazine.com"><label for="js-search-input"></label>
+                            <div class="search-input-wrapper"><input type="search" name="q" id="js-search-input" autocomplete="off" placeholder="Search Smashing..." aria-label="Search Smashing" tabindex="-1">
+                                <input type="hidden" name="sitesearch" value="smashingmagazine.com">
+                                <a id="js-search-clear-button" class="search-clear-button" tabindex="-1" role="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.35 15.36" width="16" height="16" tabind="-1">
+                                        <title>Clear Search</title>
+                                        <path fill="#e33b2a" d="M8.38 11.41c-.5-.5-.78-.52-1.33.0l-3.05 3.08c-1.18 1.18-1.7 1.18-3-.16s-1.18-2-.18-3l3.18-3.19a.69.69.0 0 0-.07-1.14l-3-3c-1-1-1.13-1.81.0-3s1.9-1.21 3.13.0l2.94 3a.66.66.0 0 0 1.11.0c.63-.65 2.49-2.51 3.28-3.35a1.46 1.46.0 0 1 2.3-.15c.24.24.47.42.89.84.86.86.94 1.57.05 2.46l-3.27 3.26c-.36.34-.52.58-.16.94l3.27 3.27c1.1 1.1 1.23 1.7.05 2.88l-.58.58a1.59 1.59.0 0 1-2.46-.21z"></path>
+                                    </svg></a></div><input type="submit" name="submit" value="Search" class="btn" id="js-search-submit">
+                        </form>
+                        <div class="header__search-logo"><a href="https://www.algolia.com/" tabindex="-1"><img src="https://d33wubrfki0l68.cloudfront.net/11a5e7690621ea3c342176fe395f8ab04e74b963/24691/images/search-by-algolia-white.svg" alt="Search powered by our good friends at Algolia"></a></div>
+                    </div>
+                    <div data-component="SearchResults" data-lite="true">
+                        <div class="row">
+                            <div class="col col-12"></div>
+                        </div>
+                    </div>
+                    <div class="header__topics" id="topics-list">
+                        <h4 class="header__topics__title">Browse All Topics</h4>
+                        <ul class="header__topics__list">
+                            <li class="header__topics__item"><a href="/category/accessibility" tabindex="-1">Accessibility</a></li>
+                            <li class="header__topics__item"><a href="/category/android" tabindex="-1">Android</a></li>
+                            <li class="header__topics__item"><a href="/category/animation" tabindex="-1">Animation</a></li>
+                            <li class="header__topics__item"><a href="/category/apps" tabindex="-1">Apps</a></li>
+                            <li class="header__topics__item"><a href="/category/css" tabindex="-1">CSS</a></li>
+                            <li class="header__topics__item"><a href="/category/design" tabindex="-1">Design</a></li>
+                            <li class="header__topics__item"><a href="/category/design-patterns" tabindex="-1">Design Patterns</a></li>
+                            <li class="header__topics__item"><a href="/category/design-systems" tabindex="-1">Design Systems</a></li>
+                            <li class="header__topics__item"><a href="/category/e-commerce" tabindex="-1">E-Commerce</a></li>
+                            <li class="header__topics__item"><a href="/category/freebies" tabindex="-1">Freebies</a></li>
+                            <li class="header__topics__item"><a href="/category/graphics" tabindex="-1">Graphics</a></li>
+                            <li class="header__topics__item"><a href="/category/html" tabindex="-1">HTML</a></li>
+                            <li class="header__topics__item"><a href="/category/illustrator" tabindex="-1">Illustrator</a></li>
+                            <li class="header__topics__item"><a href="/category/inspiration" tabindex="-1">Inspiration</a></li>
+                            <li class="header__topics__item"><a href="/category/ios" tabindex="-1">iOS</a></li>
+                            <li class="header__topics__item"><a href="/category/javascript" tabindex="-1">JavaScript</a></li>
+                            <li class="header__topics__item"><a href="/category/mobile" tabindex="-1">Mobile</a></li>
+                            <li class="header__topics__item"><a href="/category/pattern-libraries" tabindex="-1">Pattern Libraries</a></li>
+                            <li class="header__topics__item"><a href="/category/performance" tabindex="-1">Performance</a></li>
+                            <li class="header__topics__item"><a href="/category/photoshop" tabindex="-1">Photoshop</a></li>
+                            <li class="header__topics__item"><a href="/category/plugins" tabindex="-1">Plugins</a></li>
+                            <li class="header__topics__item"><a href="/category/react" tabindex="-1">React</a></li>
+                            <li class="header__topics__item"><a href="/category/responsive-web-design" tabindex="-1">Responsive Web Design</a></li>
+                            <li class="header__topics__item"><a href="/category/service-workers" tabindex="-1">Service Workers</a></li>
+                            <li class="header__topics__item"><a href="/category/sketch" tabindex="-1">Sketch</a></li>
+                            <li class="header__topics__item"><a href="/category/typography" tabindex="-1">Typography</a></li>
+                            <li class="header__topics__item"><a href="/category/ui" tabindex="-1">UI</a></li>
+                            <li class="header__topics__item"><a href="/category/usability" tabindex="-1">Usability</a></li>
+                            <li class="header__topics__item"><a href="/category/user-experience" tabindex="-1">User Experience</a></li>
+                            <li class="header__topics__item"><a href="/category/wallpapers" tabindex="-1">Wallpapers</a></li>
+                            <li class="header__topics__item"><a href="/category/web-design" tabindex="-1">Web Design</a></li>
+                            <li class="header__topics__item"><a href="/category/wordpress" tabindex="-1">WordPress</a></li>
+                            <li class="header__topics__item"><a href="/category/workflow" tabindex="-1">Workflow</a></li>
+                        </ul>
+                    </div><button data-handler="ContrastSwitcher" class="contrast-switcher contrast-switcher--alt" aria-pressed="true">
+                        <figure class="settings settings--white settings--small">
+                            <div class="settings__image-wrapper">
+                                <div class="settings__image"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" enable-background="new 0 0 24 24">
+                                        <g>
+                                            <path d="m13.3 4.1c-.4-.1-.9-.1-1.3-.1-4.4.0-8 3.6-8 8s3.6 8 8 8c.4.0.9.0 1.3-.1 3.9-.6 6.7-4 6.7-7.9s-2.8-7.2-6.7-7.9zm-1.1 13.9c-.1.0-.1.0-.2.0-3.3.0-6-2.7-6-6s2.7-6 6-6c.1.0.1.0.2.0v12z"></path>
+                                        </g>
+                                    </svg></div>
+                            </div>
+                        </figure><span class="btn btn--ghost--white settings--state">Bring red back!</span>
+                    </button>
+                </div>
+            </div><button data-handler="ContrastSwitcher" class="contrast-switcher" aria-pressed="true">
+                <figure class="settings settings--white settings--small">
+                    <div class="settings__image-wrapper">
+                        <div class="settings__image"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" enable-background="new 0 0 24 24">
+                                <g>
+                                    <path d="m13.3 4.1c-.4-.1-.9-.1-1.3-.1-4.4.0-8 3.6-8 8s3.6 8 8 8c.4.0.9.0 1.3-.1 3.9-.6 6.7-4 6.7-7.9s-2.8-7.2-6.7-7.9zm-1.1 13.9c-.1.0-.1.0-.2.0-3.3.0-6-2.7-6-6s2.7-6 6-6c.1.0.1.0.2.0v12z"></path>
+                                </g>
+                            </svg></div>
+                    </div>
+                </figure><span class="btn btn--ghost--white settings--state">Bring red back!</span>
+            </button>
+        </div>
+    </header>
+    <main id="main" tabindex="-1">
+        <div class="featured-articles-container">
+            <h1 class="featured-articles__teaser" id="featured-articles__heading"><span>Don’t Miss These Latest<br>Articles</span></h1>
+            <article class="featured-article">
+                <div class="nowrap">
+                    <figure class="author author--white author--small"><a href="/author/vitaly-friedman">
+                            <div class="author__image-wrapper tilt">
+                                <div class="author__image"><img src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/6f60ba6a-465e-42fb-b501-1329d45bf084/vitaly-friedman-profile-pic.jpg" alt="Vitaly Friedman" class="author__desc__image-placeholder"></div>
+                            </div>
+                        </a></figure>
+                    <p class="featured-article__intro"><span><a href="/author/vitaly-friedman" class="featured-article__author-name">Vitaly Friedman</a>
+                            <span class="wrote">wrote</span></span></p>
+                </div>
+                <h2 class="featured-article__title"><a href="/2019/05/digital-policy-interview-kristina-podnar/" class="featured-article__title__a">Setting Up A Digital Policy: An Interview With Kristina Podnar</a>
+                    <a class="featured-article__comments-count" href="/2019/05/digital-policy-interview-kristina-podnar/#comments-digital-policy-interview-kristina-podnar"><span data-component="CommentsCount" data-insert="true" data-thread="/2019/05/digital-policy-interview-kristina-podnar/"><span>Leave a comment</span></span></a></h2>
+                <ul class="featured-article__tags" role="group" aria-label="article tags">
+                    <li class="article__tag"><a class="featured-article__tag" href="/categories/interviews">Interviews
+                            <sup class="featured-article__tag__count">38</sup></a></li>
+                    <li class="article__tag"><a class="featured-article__tag" href="/categories/business">Business
+                            <sup class="featured-article__tag__count">273</sup></a></li>
+                </ul>
+            </article>
+            <article class="featured-article">
+                <div class="nowrap">
+                    <figure class="author author--white author--small"><a href="/author/manuelalangella">
+                            <div class="author__image-wrapper tilt">
+                                <div class="author__image"><img src="https://www.gravatar.com/avatar/84bc8004641c151f07fef1fb9c83fe34?s=70&amp;d=mm&amp;r=g" alt="Manuela Langella" class="author__desc__image-placeholder"></div>
+                            </div>
+                        </a></figure>
+                    <p class="featured-article__intro"><span><a href="/author/manuelalangella" class="featured-article__author-name">Manuela Langella</a>
+                            <span class="wrote">wrote</span></span></p>
+                </div>
+                <h2 class="featured-article__title"><a href="/2019/05/mid-century-modern-illustration-cover-book-illustrator-indesign/" class="featured-article__title__a">Mid-Century Modern Illustration: Creating A Cover Book With Illustrator And InDesign</a>
+                    <a class="featured-article__comments-count" href="/2019/05/mid-century-modern-illustration-cover-book-illustrator-indesign/#comments-mid-century-modern-illustration-cover-book-illustrator-indesign"><span data-component="CommentsCount" data-insert="true" data-thread="/2019/05/mid-century-modern-illustration-cover-book-illustrator-indesign/"><span>Leave a comment</span></span></a></h2>
+                <ul class="featured-article__tags" role="group" aria-label="article tags">
+                    <li class="article__tag"><a class="featured-article__tag" href="/categories/photoshop">Photoshop
+                            <sup class="featured-article__tag__count">87</sup></a></li>
+                    <li class="article__tag"><a class="featured-article__tag" href="/categories/illustrator">Illustrator
+                            <sup class="featured-article__tag__count">32</sup></a></li>
+                    <li class="article__tag"><a class="featured-article__tag" href="/categories/inspiration">Inspiration
+                            <sup class="featured-article__tag__count">356</sup></a></li>
+                </ul>
+            </article>
+            <article class="featured-article">
+                <div class="nowrap">
+                    <figure class="author author--white author--small"><a href="/author/suzanne-scacca">
+                            <div class="author__image-wrapper tilt">
+                                <div class="author__image"><img src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/28bde710-bee5-46a9-9a78-de32e6d7a90e/suzanne-scacca-200px.jpg" alt="Suzanne Scacca" class="author__desc__image-placeholder"></div>
+                            </div>
+                        </a></figure>
+                    <p class="featured-article__intro"><span><a href="/author/suzanne-scacca" class="featured-article__author-name">Suzanne Scacca</a>
+                            <span class="wrote">wrote</span></span></p>
+                </div>
+                <h2 class="featured-article__title"><a href="/2019/05/inspiration-digital-influencers/" class="featured-article__title__a">Finding Inspiration In Digital Influencers</a>
+                    <a class="featured-article__comments-count" href="/2019/05/inspiration-digital-influencers/#comments-inspiration-digital-influencers"><span data-component="CommentsCount" data-insert="true" data-thread="/2019/05/inspiration-digital-influencers/"><span>Leave a comment</span></span></a></h2>
+                <ul class="featured-article__tags" role="group" aria-label="article tags">
+                    <li class="article__tag"><a class="featured-article__tag" href="/categories/design">Design
+                            <sup class="featured-article__tag__count">417</sup></a></li>
+                    <li class="article__tag"><a class="featured-article__tag" href="/categories/mobile">Mobile
+                            <sup class="featured-article__tag__count">318</sup></a></li>
+                    <li class="article__tag"><a class="featured-article__tag" href="/categories/inspiration">Inspiration
+                            <sup class="featured-article__tag__count">356</sup></a></li>
+                </ul>
+            </article>
+            <article class="featured-article">
+                <div class="nowrap">
+                    <figure class="author author--white author--small"><a href="/author/richard-leddy">
+                            <div class="author__image-wrapper tilt">
+                                <div class="author__image"><img src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/f6c344ac-502d-41dc-a0a4-a16d06281298/web-page-sequence.png" alt="Richard Leddy" class="author__desc__image-placeholder"></div>
+                            </div>
+                        </a></figure>
+                    <p class="featured-article__intro"><span><a href="/author/richard-leddy" class="featured-article__author-name">Richard Leddy</a>
+                            <span class="wrote">wrote</span></span></p>
+                </div>
+                <h2 class="featured-article__title"><a href="/2019/05/svg-web-page-components-iot-part1/" class="featured-article__title__a">SVG Web Page Components For IoT And Makers (Part 1)</a>
+                    <a class="featured-article__comments-count" href="/2019/05/svg-web-page-components-iot-part1/#comments-svg-web-page-components-iot-part1"><span data-component="CommentsCount" data-insert="true" data-thread="/2019/05/svg-web-page-components-iot-part1/"><span><span class="small-caps">2</span> comments</span></span></a></h2>
+                <ul class="featured-article__tags" role="group" aria-label="article tags">
+                    <li class="article__tag"><a class="featured-article__tag" href="/categories/javascript">JavaScript
+                            <sup class="featured-article__tag__count">221</sup></a></li>
+                    <li class="article__tag"><a class="featured-article__tag" href="/categories/vue">Vue
+                            <sup class="featured-article__tag__count">9</sup></a></li>
+                    <li class="article__tag"><a class="featured-article__tag" href="/categories/svg">SVG
+                            <sup class="featured-article__tag__count">27</sup></a></li>
+                </ul>
+            </article>
+        </div>
+        <div class="cover">
+            <div class="membership-popup" id="membership-popup" data-handler="ShowIfAdBlock">
+                <div class="container">
+                    <div class="col-8 membership-popup__content">
+                        <p>All you want is a <strong>fast, secure web</strong>? That's why we use ad blockers, too, you know. We gotta keep those servers running though... So we've set up <a href="/membership/">Membership</a> for smart cookies like you. Coming up next:</p>
+                        <ul>
+                            <li>Smashing TV Session with Heather Burns on “<a href="/smashing-tv/developing-for-privacy/">Developing And Designing For Privacy</a>”,</li>
+                            <li>New discounts on tools, services and tutorials,</li>
+                            <li>...plus a seasoned selection of fancy cats.</li>
+                        </ul><a href="/membership/" role="button" class="btn btn--large btn--green">Explore Membership&nbsp;→</a>
+                        <button class="membership-popup__close-button" id="membership-popup__close-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.35 15.36" width="16" height="16" tabind="-1">
+                                <title>Hide Notification</title>
+                                <path class="x" d="M8.38 11.41c-.5-.5-.78-.52-1.33.0l-3.05 3.08c-1.18 1.18-1.7 1.18-3-.16s-1.18-2-.18-3l3.18-3.19a.69.69.0 0 0-.07-1.14l-3-3c-1-1-1.13-1.81.0-3s1.9-1.21 3.13.0l2.94 3a.66.66.0 0 0 1.11.0c.63-.65 2.49-2.51 3.28-3.35a1.46 1.46.0 0 1 2.3-.15c.24.24.47.42.89.84.86.86.94 1.57.05 2.46l-3.27 3.26c-.36.34-.52.58-.16.94l3.27 3.27c1.1 1.1 1.23 1.7.05 2.88l-.58.58a1.59 1.59.0 0 1-2.46-.21z"></path>
+                            </svg></button>
+                    </div>
+                    <div class="col-4 membership-popup__illustration">
+                        <div class="books__book__img"><a href="/membership/"><img src="https://d33wubrfki0l68.cloudfront.net/ac26a567a46366d6991c35d1fc8f8a56d5ca48fd/3655d/images/smashing-cat/cat-firechat.svg" alt="Smashing Cat, sitting in front of a fireplace."></a></div>
+                    </div>
+                </div>
+            </div>
+            <section class="latest-articles-container bg--beige">
+                <div class="container">
+                    <div class="row">
+                        <h4 class="vertical vertical--horizontal-fallback left-lined"><span>Latest Posts</span></h4>
+                        <div class="article--grid__container">
+                            <div class="article--grid col--article--grid">
+                                <article class="article--grid__content-wrapper">
+                                    <header><time datetime="2019-05-07 12:30:59 +0200 +0200" class="article--grid__time" data-handler="AddTimeAgo">7 days ago</time>
+                                        <h2 class="article--grid__title"><a href="/2019/05/mason-front-end-service-product-development/">Why Mason And Front-End As A Service Will Be A Game Changer For Product Development</a></h2><span class="article--grid__author">by <a href="/author/suzanne-scacca">Suzanne Scacca</a></span>
+                                    </header>
+                                    <p class="article--grid__content">With the introduction of front-end-as-a-service, and a company like Mason pioneering the way, software development and maintenance doesn’t have to be a time-consuming and arduous process.</p>
+                                </article><a href="/2019/05/mason-front-end-service-product-development/" class="article--grid__read-more">→ <span class="sr-only">Read more</span></a>
+                            </div>
+                            <div class="article--grid col--article--grid">
+                                <article class="article--grid__content-wrapper">
+                                    <header><time datetime="2019-05-06 13:30:59 +0200 +0200" class="article--grid__time" data-handler="AddTimeAgo">7 days ago</time>
+                                        <h2 class="article--grid__title"><a href="/2019/05/hybrid-lazy-loading-progressive-migration-native/">Hybrid Lazy Loading: A Progressive Migration To Native Lazy Loading</a></h2><span class="article--grid__author">by <a href="/author/andrea-verlicchi">Andrea Verlicchi</a></span>
+                                    </header>
+                                    <p class="article--grid__content">In this article, you’ll learn how you can progressively replace your JavaScript-driven lazy loading with its native alternative — thanks to hybrid lazy loading.</p>
+                                </article><a href="/2019/05/hybrid-lazy-loading-progressive-migration-native/" class="article--grid__read-more">→ <span class="sr-only">Read more</span></a>
+                            </div>
+                            <div data-audience="subscriber" class="article--grid col--article--grid hidden">
+                                <article class="article--grid__content-wrapper">
+                                    <header><time datetime="2019-05-03 14:00:59 +0200 +0200" class="article--grid__time" data-handler="AddTimeAgo">10 days ago</time>
+                                        <h2 class="article--grid__title"><a href="/2019/05/svg-design-tools-practical-guide/">A Practical Guide To SVG And Design Tools</a></h2><span class="article--grid__author">by <a href="/author/mikolaj-dobrucki">Mikołaj Dobrucki</a></span>
+                                    </header>
+                                    <p class="article--grid__content">To make the best of SVG, it’s useful not only to learn its syntax but also to understand how SVG is generated by graphic design software. Let’s take a closer look at the process of generating SVG with popular design apps and how we can use them to …</p>
+                                </article><a href="/2019/05/svg-design-tools-practical-guide/" class="article--grid__read-more">→ <span class="sr-only">Read more</span></a>
+                            </div>
+                            <div class="article--grid col--article--grid">
+                                <article class="article--grid__content-wrapper">
+                                    <header><time datetime="2019-05-02 12:30:16 +0200 +0200" class="article--grid__time" data-handler="AddTimeAgo">12 days ago</time>
+                                        <h2 class="article--grid__title"><a href="/2019/05/future-design-voice-prototypes/">Designing For The Future With Voice Prototypes</a></h2><span class="article--grid__author">by <a href="/author/nickbabich">Nick Babich</a></span>
+                                    </header>
+                                    <p class="article--grid__content">It’s essential to be ready to design for both visual and voice. Since prototyping for voice is new for many designers, it may be unclear as to where to start and what process to follow.</p>
+                                </article><a href="/2019/05/future-design-voice-prototypes/" class="article--grid__read-more">→ <span class="sr-only">Read more</span></a>
+                            </div>
+                            <div id="sponsors-main-page" data-impression="true" class="col--article--grid col--article__grid--ad" data-audience="non-subscriber">
+                                <article class="article--grid__content-wrapper">
+                                    <div data-audience="non-subscriber" data-remove="true" class="c-promo-box c-promo-box--ad sponsors center" data-amount="1" data-width="250" data-rendered="true">
+                                        <ul>
+                                            <li class="sponsors-11581">
+                                                <a href="https://smashing-delivery.herokuapp.com/ball?uri=//srv.buysellads.com/ads/click/x/GTND42QMCAADT23UCVS4YKQMCWSIE2JICYSDKZ3JCWBI527ECKYIC23KC6BIP27YC6YDTK3EHJNCLSIZ">
+                                                    <div class="sponsors--image-wrapper" data-title="Vimeo - Keep your rough cuts to yourself with Advanced Privacy, a Vimeo feature.">
+                                                        <img src="https://smashing-delivery.herokuapp.com/catch?uri=https://cdn4.buysellads.net/uu/1/46074/1553953392-vimeo250x100-01.png">
+                                                    </div>
+                                                    <div class="sponsors--content-wrapper">
+                                                        <div class="sponsors--title">Vimeo</div>
+                                                        <div class="sponsors--text" data-title="Vimeo - Keep your rough cuts to yourself with Advanced Privacy, a Vimeo feature.">Keep your rough cuts to yourself with Advanced Privacy, a Vimeo feature.</div>
+                                                    </div>
+                                                    <span class="sponsors--cta">Keep It Private</span>
+                                                </a>
+                                                <img class="pixel" src="https://ad.doubleclick.net/ddm/trackimp/N8030.1676840CARBONADS.COM/B22286166.243068686;dc_trk_aid=439901576;dc_trk_cid=113955517;ord=1557812818;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?" style="display:none;" height="0" width="0">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="article--grid col--article--grid col--article--meow col--article--meow__membership">
+                                <div class="row meow__masthead">
+                                    <div class="col col-9"><a href="/membership" class="promo-box__image-link"><img data-src="https://d33wubrfki0l68.cloudfront.net/aea2faf51cc69a1e10bb434aa92f7c3821f16787/e4922/images/smashing-cat/singing-barista.svg" class="meow__illustration--nosplit" alt="Smashing Cat brewing a fresh, tasty cappuccino."></a></div>
+                                    <div class="col col-9 meow__content">
+                                        <h1 class="dashboard__header__greeting h2"><a href="/membership">1,492 smashing members</a></h1>
+                                        <p class="meow__intro">A friendly community that keeps this website alive. With books, webinars, discounts and networking — for just 1 coffee a month. <a href="/membership/">Join the family.</a></p><a href="/membership" role="button" class="btn btn--medium btn--white">Explore features&nbsp;→</a>
+                                        <small class="meow__content--membership-box">Already have an account? <a href="/auth/">Sign in!</a></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article--grid col--article--grid">
+                                <article class="article--grid__content-wrapper">
+                                    <header><time datetime="2019-05-01 13:00:59 +0200 +0200" class="article--grid__time" data-handler="AddTimeAgo">12 days ago</time>
+                                        <h2 class="article--grid__title"><a href="/2019/05/display-box-generation/">Digging Into The Display Property: Box Generation</a></h2><span class="article--grid__author">by <a href="/author/rachel-andrew">Rachel Andrew</a></span>
+                                    </header>
+                                    <p class="article--grid__content">Continuing a series on the <code>display</code> property in CSS, this time Rachel Andrew takes a look at the values which control box generation, for those times when you don’t want to generate a box at all.</p>
+                                </article><a href="/2019/05/display-box-generation/" class="article--grid__read-more">→ <span class="sr-only">Read more</span></a>
+                            </div>
+                            <div class="article--grid col--article--grid">
+                                <article class="article--grid__content-wrapper">
+                                    <header><time datetime="2019-04-30 14:50:31 +0200 +0200" class="article--grid__time" data-handler="AddTimeAgo">13 days ago</time>
+                                        <h2 class="article--grid__title"><a href="/2019/04/desktop-wallpaper-calendars-may-2019/">The Wonders Of May (2019 Wallpapers Edition)</a></h2><span class="article--grid__author">by <a href="/author/cosima-mielke">Cosima Mielke</a></span>
+                                    </header>
+                                    <p class="article--grid__content">Artists and designers from across the globe once again got out their favorite tools and designed unique and inspiring wallpapers to welcome the new month. Available with and without a calendar for May 2019. Enjoy!</p>
+                                </article><a href="/2019/04/desktop-wallpaper-calendars-may-2019/" class="article--grid__read-more">→ <span class="sr-only">Read more</span></a>
+                            </div>
+                            <div class="article--grid col--article--grid">
+                                <article class="article--grid__content-wrapper">
+                                    <header><time datetime="2019-04-30 12:00:59 +0200 +0200" class="article--grid__time" data-handler="AddTimeAgo">14 days ago</time>
+                                        <h2 class="article--grid__title"><a href="/2019/04/smashingconf-san-francisco-2019/">Looking Back At SmashingConf San Francisco 2019</a></h2><span class="article--grid__author">by <a href="/author/rachel-andrew">Rachel Andrew</a></span>
+                                    </header>
+                                    <p class="article--grid__content">We had a wonderful time at the sold-out <a href="https://smashingconf.com/sf-2019/">SmashingConf San Francisco</a>! In this article, Rachel Andrew rounds up all of the videos, photos, tweets and resources that were shared on- and offstage.</p>
+                                </article><a href="/2019/04/smashingconf-san-francisco-2019/" class="article--grid__read-more">→ <span class="sr-only">Read more</span></a>
+                            </div>
+                            <div class="article--grid col--article--grid">
+                                <article class="article--grid__content-wrapper">
+                                    <header><time datetime="2019-04-29 12:30:16 +0200 +0200" class="article--grid__time" data-handler="AddTimeAgo">15 days ago</time>
+                                        <h2 class="article--grid__title"><a href="/2019/04/designers-guide-better-decisions/">A Designer’s Guide To Better Decisions</a></h2><span class="article--grid__author">by <a href="/author/eric-olive">Eric Olive</a></span>
+                                    </header>
+                                    <p class="article--grid__content">Design involves decisions, and those decisions are often flawed because our brains are wired for survival. Learn why we often fall into four common decision traps and how to avoid them.</p>
+                                </article><a href="/2019/04/designers-guide-better-decisions/" class="article--grid__read-more">→ <span class="sr-only">Read more</span></a>
+                            </div>
+                            <div class="article--grid col--article--grid col--article--meow col--article--meow__membership">
+                                <div class="row meow__masthead">
+                                    <div class="col col-9"><a href="/smashing-tv/" class="promo-box__image-link"><img data-src="https://d33wubrfki0l68.cloudfront.net/72280e1450d4ecfc45ef96ea00b27b4bf4ef5d06/eb759/images/smashing-cat/cat-smashing-tv-2.svg" class="meow__illustration--nosplit" alt="Smashing Cat filming for Smashing TV."></a></div>
+                                    <div class="col col-9 meow__content">
+                                        <h1 class="dashboard__header__greeting h2"><a href="/smashing-tv/">New on Smashing TV</a></h1>
+                                        <p class="meow__intro">A channel where seasoned developers show how they design, build, work and play. Coming up next: <a href="/smashing-tv/developing-for-privacy/">Developing And Designing For Privacy</a> with Heather Burns (May 14).</p><a href="/smashing-tv/" role="button" class="btn btn--medium btn--white">See all upcoming episodes&nbsp;→</a>
+                                        <small class="meow__content--membership-box">Already have an account? <a href="/auth/">Sign in!</a></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="load-more col-12"><a class="load-more__link" href="/articles/page/2/">See All Latest Articles</a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="conf-panel conf-panel--blue">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-12">
+                            <header><span class="conf-panel__meta">Coming up next<span class="conf-bullet">•</span><time datetime="29059-19-296" class="article__date">June 25-26, 2019</time></span>
+                                <h2 class="conf-panel__conf--blue-name h1"><a href="https://smashingconf.com/toronto-2019/">SmashingConf Toronto 2019</a></h2>
+                            </header>
+                            <p class="conf-panel__desc">Improving accessibility and front-end workflow, refactoring, security, interface design patterns, CSS Grid techniques, performance, Git and how to write better JavaScript.</p><a href="https://smashingconf.com/toronto-2019/speakers" role="button" class="btn btn--white btn--large">Explore all speakers and topics&nbsp;→</a>
+                            <a href="https://smashingconf.com/toronto-2019/"><img class="conf-panel__image conf-panel__image--blue" src="https://d33wubrfki0l68.cloudfront.net/9bac1fff1f9f07a2f78fe65e8d2f6ae0bc62f6e6/d0b43/images/smashing-cat/space-cat-toronto.svg" alt="A blue banner that shows the SmashingConf Rocket Scientist Cat, with her helmet taken off."></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="curated-articles-container bg--white">
+                <div class="container">
+                    <div class="row">
+                        <h4 class="vertical vertical--white vertical--horizontal-fallback left-aligned"><span>Community Links</span></h4>
+                        <div class="col col-12">
+                            <figure class="c-person-of-the-week">
+                                <div class="author__image-wrapper tilt">
+                                    <div class="author__image"><a href="https://twitter.com/broccolini"><img src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/08056b46-e486-4ff1-9222-8ddd4b85ec43/diana-mounter-250px-opt.png" alt="Diana Mounter, the person of the week"></a></div>
+                                </div>
+                                <figcaption class="author__desc" aria-live="polite" aria-relevant="additions">
+                                    <h4 class="author__desc__title"><span>Person Of The Week</span></h4>
+                                    <p>Passionate about the web and with a background in user-centered design, <a href="http://broccolini.net">Diana Mounter</a> is leading design operations and systems at GitHub. She’s also the organizer of <a href="https://designsystems.nyc/">Design Systems Coalition NYC</a>, a community for people who build design systems to share and learn from each other. You can find her <a href="http://broccolini.net/#talks">speaking</a> at conferences and meetups around the world or follow her <a href="http://broccolini.net/#writing">writing</a> about design, code, and working with people. She goes by <a href="https://twitter.com/broccolini">@broccolini</a> on Twitter. Thank you for sharing and caring, dear Diana!</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="community-highlights article--grid__container col col-12">
+                            <article class="article--post col col-6">
+                                <header>
+                                    <figure class="author"><a href="https://twitter.com/LeaVerou"></a>
+                                        <div class="author__image-wrapper tilt"><a href="https://twitter.com/LeaVerou">
+                                                <div class="author__image">
+                                                    <div class="author__desc__image-placeholder" data-src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/f157fae6-6b0d-4d53-a38a-136747ff2eba/lea-verou-100px-opt.png" data-alt="Lea Verou"></div>
+                                                </div>
+                                            </a></div>
+                                    </figure><span class="article--post__author-name grey"><a href="https://www.twitter.com/LeaVerou">Lea Verou</a> <span>shared</span></span>
+                                </header>
+                                <h1 class="article--post__title"><a href="http://lea.verou.me/2019/05/utility-convert-svg-path-to-all-relative-or-all-absolute-commands/">Convert SVG Paths</a></h1>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2017-06-29" class="article--post__time">May 13, 2019 —</time></p>
+                                    <p>Lea Verou built a quick utility to convert SVG paths to all-relative or all-absolute commands. You can read more about it in her <a href="http://lea.verou.me/2019/05/utility-convert-svg-path-to-all-relative-or-all-absolute-commands/">blog post</a>.</p>
+                                </div>
+                            </article>
+                            <article class="article--post col col-6">
+                                <header>
+                                    <figure class="author"><a href="https://twitter.com/tobiasahlin"></a>
+                                        <div class="author__image-wrapper tilt"><a href="https://twitter.com/tobiasahlin">
+                                                <div class="author__image">
+                                                    <div class="author__desc__image-placeholder" data-src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/fcec015b-a1a0-4931-b6a2-583da7380ca2/tobias-ahlin-opt.png" data-alt="Tobias Ahlin"></div>
+                                                </div>
+                                            </a></div>
+                                    </figure><span class="article--post__author-name grey"><a href="https://www.twitter.com/tobiasahlin">Tobias Ahlin</a> <span>shared</span></span>
+                                </header>
+                                <h1 class="article--post__title"><a href="https://tobiasahlin.com/blog/masonry-with-css/">CSS Masonry With Flexbox</a></h1>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2017-06-29" class="article--post__time">May 10, 2019 —</time></p>
+                                    <p>A masonry layout with CSS only, using Flexbox, <code>:nth-child()</code> and <code>order</code>? Tobias Ahlin shows <a href="https://tobiasahlin.com/blog/masonry-with-css/">how to do it</a>.</p>
+                                </div>
+                            </article>
+                            <article class="article--post col col-6">
+                                <header>
+                                    <figure class="author"><a href="https://twitter.com/patfaller"></a>
+                                        <div class="author__image-wrapper tilt"><a href="https://twitter.com/patfaller">
+                                                <div class="author__image">
+                                                    <div class="author__desc__image-placeholder" data-src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/ad5e53db-6658-4c6d-852a-552ccd3ee704/patrick-faller-opt.png" data-alt="Patrick Faller"></div>
+                                                </div>
+                                            </a></div>
+                                    </figure><span class="article--post__author-name grey"><a href="https://www.twitter.com/patfaller">Patrick Faller</a> <span>shared</span></span>
+                                </header>
+                                <h1 class="article--post__title"><a href="https://medium.com/@patfaller/google-ux-designer-david-hogue-shares-how-to-reverse-over-complication-in-product-design-and-how-90c00bcad5d7">How To Avoid Over-Complication</a></h1>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2017-06-29" class="article--post__time">May 9, 2019 —</time></p>
+                                    <p>How do you know when your product has tipped the scales and has gone from being ‘feature-rich’ to just plain complicated? Patrick Faller shares <a href="https://medium.com/@patfaller/google-ux-designer-david-hogue-shares-how-to-reverse-over-complication-in-product-design-and-how-90c00bcad5d7">how to avoid over-complication</a>.</p>
+                                </div>
+                            </article>
+                            <article class="article--post col col-6">
+                                <header>
+                                    <figure class="author"><a href="https://twitter.com/alterebro"></a>
+                                        <div class="author__image-wrapper tilt"><a href="https://twitter.com/alterebro">
+                                                <div class="author__image">
+                                                    <div class="author__desc__image-placeholder" data-src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/665e5168-b03b-42a1-9a8e-8a01fa1b7b15/jorge-moreno-opt.png" data-alt="Jorge Moreno"></div>
+                                                </div>
+                                            </a></div>
+                                    </figure><span class="article--post__author-name grey"><a href="https://www.twitter.com/alterebro">Jorge Moreno</a> <span>shared</span></span>
+                                </header>
+                                <h1 class="article--post__title"><a href="https://css-transform.moro.es/">CSS3 Transform</a></h1>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2017-06-29" class="article--post__time">May 8, 2019 —</time></p>
+                                    <p>Jorge Moreno’s <a href="https://css-transform.moro.es/">CSS3 Transform Functions Playground</a> visualizes 2D and 3D CSS transform functions. Built with Vue, Gulp, and LESS.</p>
+                                </div>
+                            </article>
+                            <article class="article--post col col-6">
+                                <header>
+                                    <figure class="author"><a href="https://twitter.com/pablostanley"></a>
+                                        <div class="author__image-wrapper tilt"><a href="https://twitter.com/pablostanley">
+                                                <div class="author__image">
+                                                    <div class="author__desc__image-placeholder" data-src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/5dcb269d-429d-49fa-9cf6-eac7b3a236a4/pablo-stanley-opt.png" data-alt="Pablo Stanley"></div>
+                                                </div>
+                                            </a></div>
+                                    </figure><span class="article--post__author-name grey"><a href="https://www.twitter.com/pablostanley">Pablo Stanley</a> <span>shared</span></span>
+                                </header>
+                                <h1 class="article--post__title"><a href="https://thedesignteam.io/designer-first-world-problems-861e53c8ecf7">Designer First World Problems</a></h1>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2017-06-29" class="article--post__time">May 7, 2019 —</time></p>
+                                    <p>Designer first world problems? Pablo Stanley shares a <a href="https://thedesignteam.io/designer-first-world-problems-861e53c8ecf7">collection of random comics</a> about design, introversion, and sandwiches.</p>
+                                </div>
+                            </article>
+                            <article class="article--post col col-6">
+                                <header>
+                                    <figure class="author"><a href="https://twitter.com/ibnRubaXa"></a>
+                                        <div class="author__image-wrapper tilt"><a href="https://twitter.com/ibnRubaXa">
+                                                <div class="author__image">
+                                                    <div class="author__desc__image-placeholder" data-src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/8e6631cb-0ec3-461f-9c5f-11f60351c036/lebedev-konstantin-opt.png" data-alt="Lebedev Konstantin"></div>
+                                                </div>
+                                            </a></div>
+                                    </figure><span class="article--post__author-name grey"><a href="https://www.twitter.com/ibnRubaXa">Lebedev Konstantin</a> <span>shared</span></span>
+                                </header>
+                                <h1 class="article--post__title"><a href="http://sortablejs.github.io/Sortable/">Sortable</a></h1>
+                                <div class="article--post__content">
+                                    <p class="article--post__teaser"><time datetime="2017-06-29" class="article--post__time">May 6, 2019 —</time></p>
+                                    <p><a href="http://sortablejs.github.io/Sortable/">Sortable</a> is a JavaScript library for reorderable drag-and-drop lists on modern browsers and touch devices. It doesn’t require any jQuery.</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-12">
+                            <div class="load-more"><a class="load-more__link" href="https://www.twitter.com/smashingmag">More links on Twitter</a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="feature-panel feature-panel--red feature-panel--breakout-small">
+                <div class="feature-panel-left-col">
+                    <div class="feature-panel-description"><span class="feature-panel-meta">Featured Smashing Book</span>
+                        <h2 class="h1 feature-panel-title"><a href="/printed-books/design-systems/">Design Systems</a></h2>
+                        <p>Meet <strong>Design Systems</strong>, a recent Smashing book in which Alla Kholmatova explores how to set up an <strong>effective design system</strong> to create great digital products. With common traps, gotchas and lessons learned.</p>
+                    </div><a role="button" class="btn btn--white btn--large" href="/printed-books/design-systems/">Table of Contents&nbsp;↬</a>
+                </div>
+                <div class="feature-panel-right-col"><a href="/printed-books/design-systems/" class="feature-panel-image-link">
+                        <div class="feature-panel-image"><img class="feature-panel-image-img" src="https://res.cloudinary.com/indysigner/image/upload/v1542959380/shop/design-systems-hardcover-book.png" alt="Design Systems, a new Smashing book"></div>
+                    </a></div>
+            </section>
+            <section class="curated-articles-container bg--beige">
+                <div class="container">
+                    <div class="row">
+                        <h4 class="vertical vertical--horizontal-fallback left-aligned"><span>Curated Posts</span></h4>
+                        <div class="article--grid__container col-12">
+                            <div class="article--grid col--article--grid">
+                                <article class="article--grid__content-wrapper">
+                                    <header><small class="article--grid__note">Guides</small>
+                                        <h2 class="article--grid__title">New Front-End Challenges To Master</h2>
+                                    </header>
+                                    <div class="article--grid__content">
+                                        <ul>
+                                            <li><a href="https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/">CSS Grid Layout</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/taking-pattern-libraries-next-level/">Pattern Library</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2016/08/a-beginners-guide-to-progressive-web-apps/">Progressive Web Apps</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2017/06/guide-switching-http-https/">Switching to HTTPS</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2016/02/getting-ready-for-http2/">HTTP/2 Guidelines</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2017/01/styled-components-enforcing-best-practices-component-based-systems/">React &amp; Vue.js</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2018/07/redux-designers-guide/">Redux For Designers</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2017/08/creating-custom-inputs-vue-js/">Vue Components</a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="article--grid col--article--grid">
+                                <article class="article--grid__content-wrapper">
+                                    <header><small class="article--grid__note">Guides</small>
+                                        <h2 class="article--grid__title">Performance Optimization &amp; Strategy</h2>
+                                    </header>
+                                    <div class="article--grid__content">
+                                        <ul>
+                                            <li><a href="https://www.smashingmagazine.com/2017/10/improving-performance-security/">Quick Performance Wins</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2015/10/rail-user-centric-model-performance/">Building For Performance</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2016/12/front-end-performance-checklist-2017-pdf-pages/">Front-End Optimization</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2015/09/https-everywhere-with-nginx-varnish-apache/">Back-End Optimization</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2016/10/next-generation-server-compression-with-brotli/">Better Compression</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2016/09/the-building-blocks-of-progressive-web-apps/">Progressive Web Apps</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2015/09/why-performance-matters-the-perception-of-time/">Perceived Performance</a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="article--grid col--article--grid">
+                                <article class="article--grid__content-wrapper">
+                                    <header><small class="article--grid__note">Guides</small>
+                                        <h2 class="article--grid__title">Design Patterns &amp; Checklists</h2>
+                                    </header>
+                                    <div class="article--grid__content">
+                                        <ul>
+                                            <li><a href="https://www.smashingmagazine.com/2018/06/bringing-personality-back-to-the-web/">Responsive Art-Direction</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2018/02/designing-a-perfect-responsive-configurator/">Perfect Configurator</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2017/06/designing-efficient-web-forms/">Perfect Web Form</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2017/06/designing-perfect-accordion-checklist/">Perfect Accordion</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2017/07/designing-perfect-date-time-picker/">Perfect Date Picker</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2017/07/designing-perfect-slider/">Perfect Slider</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2017/08/designing-perfect-feature-comparison-table/">Perfect Comparison Table</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2016/03/pagination-infinite-scrolling-load-more-buttons/">Perfect Infinite Scroll</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2016/07/ten-requirements-for-making-home-page-carousels-work-for-end-users/">Perfect Carousel</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2019/04/privacy-concerns-ux-web-forms">Privacy UX</a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="article--grid col--article--grid">
+                                <article class="article--grid__content-wrapper">
+                                    <header><small class="article--grid__note">Guides</small>
+                                        <h2 class="article--grid__title">Improving Workflow &amp; Data Protection</h2>
+                                    </header>
+                                    <div class="article--grid__content">
+                                        <ul>
+                                            <li><a href="/2018/02/gdpr-for-web-developers/">GDPR For Developers</a></li>
+                                            <li><a href="/2017/07/privacy-by-design-framework/">Privacy Framework</a></li>
+                                            <li><a href="/2017/08/what-to-charge-clients/">Estimating Time</a></li>
+                                            <li><a href="/2011/12/how-do-you-deal-with-overstressed-irrational-clients-entrepreneur-view/">Dealing With Irrational Clients</a></li>
+                                            <li><a href="https://www.smashingmagazine.com/2015/12/getting-back-into-right-deliverables-business/">Getting Deliverables Right</a></li>
+                                            <li><a href="/2010/07/passing-the-holy-milestone-how-to-meet-deadlines/">Meeting Deadlines</a></li>
+                                            <li><a href="/2017/06/convincing-clients-sign-off/">Convincing Clients</a></li>
+                                            <li><a href="/2013/01/guarantee-income-with-agile-billing/">Invoicing Clients</a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="article--grid col--article--grid col--article--meow meow__content--large meow__content--homepage">
+                                <div class="row meow__masthead">
+                                    <div class="col col-12 meow__content">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="col-12">
+            </div>
+        </div>
+        </div>
+        <div class="back-to-top-wrapper" id="back_top"><a href="#top" data-scroll="#top" class="back-to-top" title="Back to top"><svg viewBox="0 0 100 100" width="25" height="25" tabindex="-1" role="img" aria-labelledby="title">
+                    <title id="title">Back to top</title>
+                    <path d="M10 50l50 50L70 90 30 50 70 10 60 0z" transform="translate(0 0) rotate(90 50 50)" fill="#fff" stroke="#fff"></path>
+                    <image src="https://d33wubrfki0l68.cloudfront.net/a0a37998d83f76d320162750bc965f3ee67980be/820d5/images/back-to-top-arrow.png" alt="Back to top arrow" width="100%" height="100%"></image>
+                </svg></a></div>
+        <div id="cart" class="cart-wrapper" data-component="MiniCart"></div>
+    </footer>
+    <div data-handler="PostLoad"></div>
