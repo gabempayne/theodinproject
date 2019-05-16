@@ -1,27 +1,17 @@
-/*
- * 	Media Queries & Responsive Grid
- *		David Cochran 2011 
-*/
-
-/* Experimental Basic Grid */
-
-	.container {
-		background: hsla(270,60%, 40%, 0.2);		
-		margin: 0 40px;
-	}
-	.row {
-		margin-left: -3%;
-	}
-	[class*="span"] {
-		display: inline;
-		float: left;
-		margin-left: 3%;
-	} 
-	.span-one-third {
-		width: 30%;
-	}
-
-
+.container {
+        margin: 0 40px;
+    }
+    .row {
+        margin-left: -3%;
+    }
+    [class*="span"] {
+        display: inline;
+        float: left;
+        margin-left: 3%;
+    }
+    .span-one-third {
+        width: 30%;
+    }
 
 /* OTHER STYLES -- NOT TOUCHED IN THIS EXERCISE */
 
