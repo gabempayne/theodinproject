@@ -1,0 +1,114 @@
+10 Principles for Keeping Your Programming Code Clean
+January 20, 2011in Developmentby Pamela Rodríguez Domínguez
+10 Principles for Keeping Your Programming Code Clean
+A common issue in almost every profession that can drive people completely insane is having to continue from what somebody else started. The main reason for this being the fact that everyone has different ways of working, and sometimes these self-induced habits can be just downright messy.
+
+In order to make code look cleaner, and thus, support team work (meaning that somebody else might need to work with what was coded before), there are certain considerations that should be taken into account.
+
+10 Principles for Keeping Your Programming Code Clean
+
+Keeping Your Programming Code Clean
+1. Revise Your Logic Before Coding
+Before blindly typing into the debugger of choice, some flow diagrams or written pseudo-code might come in handy to previously verify the logic behind those lines of code. Writing it down first can clarify many doubts or insecurities about complex functionality, and therefore save a lot of time. But most importantly, helping you get it right faster will also help you avoid all the messy code replacements and additions that tamper with the following principles.
+
+Revise Your Logic Before Coding
+
+2. Clearly Expose the Structure of the Page
+Working with main containers is useful, but working with main containers with a representative ID is even more useful. Consider the following starting scenario:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+<div id="main-container">
+    <div id="header">
+        <div id="logo">...</div>
+        <div id="main-menu">...</div>
+    </div>
+    <div id="content">
+        <div id="left-column">...</div>
+ 
+        <div id="center-column">...</div>
+        <div id="right-column">...</div>
+    </div>
+    <div id="footer">
+        <div id="footer-menu">...</div>
+        <div id="disclaimer">...</div>
+    </div>
+</div>  
+The structure appears evident, thanks to the DIV containers that are concretely named after their destined content. Not only will it be simpler to start adding code, but it’ll also be perfectly transparent for someone who tries to add or remove something afterward. This structuring method, however, should be aided by the next statement.
+
+3. Use the Correct Indentation
+Supporting the previous pronouncement on structure, indentation distinctly displays the opening and closing points of each element used. If every line of code is glued to the left side of the screen, it’ll be very hard to distinguish the exact place where an element is closed. Therefore, it’ll mess up the effort made at designing a complete structure, since it won’t be noticeable afterward.
+
+Use the Correct Indentation
+
+4. Write Explanatory Comments
+Underestimating the value of good comments is disregarding a very effective way of code documentation. It’s easy, fast, and very straight-to-the-point, since it’s done right then and there when it’s needed.
+
+Comments are also efficient considering the fact that they can be read at the exact moment of doubt. They can, however, be overused. And that brings us to the next recommendation.
+
+5. Avoid Abusing Comments
+Comments aren’t to be treated lightly. When commenting on code, the current functionality is explained in terms of variables and results. What comments are NOT made for is:
+
+Writing explanatory notes to self (e.g. /* Will finish this later… */).
+Blaming stuff on other people (e.g. /* John coded this. Ask him. */).
+Writing vague statements (e.g. /* This is another math function. */).
+Erasing chunks of code. Sometimes people are not sure of erasing things and it’s not absolutely evil to comment that code instead.
+What’s not right is to just leave it afterwards. It’ll be terribly confusing. If the code will be documented via embedded comments, the team members need to make sure those comments are there for a reason.
+
+Examples of good comment use are:
+
+Authoring specifications (e.g. /* Coded by John, November 13th 2010 */).
+Detailed statements on the functionality of a method or procedure (e.g. /* This function validates the login form with the aid of the e-mail check function */).
+Quick notifications or labels that state where a recent change was made (e.g. /* Added e-mail validation procedure */).
+Avoid Abusing Comments
+
+6. Avoid Extremely Large Functions
+In the process of adding functionality to an application, its coded methods tend to grow accordingly. One can come across functions that consist of up to a hundred lines of code, and this tends to become confusing.
+
+A better practice would be to break up large functions into smaller ones. Some procedures may even be repeating themselves amongst the rest of the functions conforming the whole application process. The team could make better use of those repeated procedures through separate functions. This, however, should have been avoided from the beginning if the first recommendation was carried out correctly.
+
+7. Use Naming Standards for Functions and Variables
+Whenever a variable or a function is created, its name should be descriptive enough as to give a general idea of what it does or what it’s for.
+
+Use Naming Standards for Functions and Variables
+
+There are companies that have their own pre-established naming standards (e.g. The prefix ‘int_’ for any numeric variables), but there are also many companies in which the employees do not keep these standards. Laziness makes people work double the time during future redesigns, so everyone needs to start learning how to get rid of it.
+
+8. Treat Changes with Caution
+The correct appliance of changes summarizes a lot of what has been previously said, like commenting meaningfully and not disrupting indentations. Nevertheless, it needs to be emphasized. Whenever there’s a need for adding, removing, or changing something, there should also be an awareness of not meddling with previous efforts for maintaining the code clean and ordered.
+
+This mainly involves:
+
+Keeping the correct indentations (e.g. when inserting an IF clause, its contents’ indentations will be augmented).
+Commenting on the modification made or broadening the existing comments.
+Respecting standards in use.
+9. Avoid Indiscriminate Mixing of Coding Languages
+In-line CSS styling and scattered JavaScript tags with short procedures within them are very good examples of incorrect mixing of coding languages throughout your development process. Ignoring this principle will result in huge element tags with an embedded STYLE property, lots of interruptions in the flow of the structure because of embedded functions, and of course lots and lots of confusion.
+
+Avoid Indiscriminate Mixing of Coding Languages
+
+Even with the addition of comments, it’ll still look like everything and nothing at the same time. Having the appropriate divisions between different coding languages will give order to the logic applied. This brings us, though, to the next consideration.
+
+10. Summarize Your Imports
+Even though it is much better to have additional coding languages imported from different files, this shouldn’t be abused. If there are too many style sheets, they can probably be summarized into one or two.
+
+This won’t only save space and make things look cleaner, but it will also save loading time. Each imported file is an HTTP request that tampers with the performance of your application. So apart from being a consideration for tidiness, it is also a consideration for efficiency.
+
+And, of course, this way one can avoid dealing with Internet Explorer’s limit to the number of individual stylesheets.
+
+To Sum Up
+What’s convenient isn’t always what’s best for the development process, since finding the convenient way to do something tends to drive us towards disregarding coding efficiency. Implied in this case for efficiency, there is a high need to keep up with standards in order to maintain a code that’s readable in the future. Considering that it won’t always be the same person who works on upgrading the same application, code should be sufficiently open and understandable for it to really support team work.
