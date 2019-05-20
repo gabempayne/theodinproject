@@ -109,6 +109,3 @@ Even though it is much better to have additional coding languages imported from 
 This won’t only save space and make things look cleaner, but it will also save loading time. Each imported file is an HTTP request that tampers with the performance of your application. So apart from being a consideration for tidiness, it is also a consideration for efficiency.
 
 And, of course, this way one can avoid dealing with Internet Explorer’s limit to the number of individual stylesheets.
-
-To Sum Up
-What’s convenient isn’t always what’s best for the development process, since finding the convenient way to do something tends to drive us towards disregarding coding efficiency. Implied in this case for efficiency, there is a high need to keep up with standards in order to maintain a code that’s readable in the future. Considering that it won’t always be the same person who works on upgrading the same application, code should be sufficiently open and understandable for it to really support team work.
