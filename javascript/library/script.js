@@ -1,7 +1,15 @@
-// let myLibrary = [];
+let myLibrary = [];
 
-// function Book() {
-// }
+function Book(author, title, pages, has_read) {
+    this.author = author;
+    this.title = title;
+    this.has_read = has_read;
+}
 
-// function addBookToLibrary() {
-// }
+function addBookToLibrary() {
+    myLibrary.push(Book(author, title, pages, has_read));
+}
+
+function printLibrary() {
+    console.log(myLibrary);
+}

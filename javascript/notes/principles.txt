@@ -9,7 +9,13 @@ In order to make code look cleaner, and thus, support team work (meaning that so
 
 Keeping Your Programming Code Clean
 1. Revise Your Logic Before Coding
-Before blindly typing into the debugger of choice, some flow diagrams or written pseudo-code might come in handy to previously verify the logic behind those lines of code. Writing it down first can clarify many doubts or insecurities about complex functionality, and therefore save a lot of time. But most importantly, helping you get it right faster will also help you avoid all the messy code replacements and additions that tamper with the following principles.
+Before blindly typing into the debugger 
+of choice, some flow diagrams or written 
+pseudo-code might come in handy to previously 
+verify the logic behind those lines of code. 
+Writing it down first can clarify many doubts 
+or insecurities about complex functionality,
+and therefore save a lot of time. But most importantly, helping you get it right faster will also help you avoid all the messy code replacements and additions that tamper with the following principles.
 
 Revise Your Logic Before Coding
 
