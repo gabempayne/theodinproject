@@ -6,10 +6,14 @@ function Book(author, title, pages, has_read) {
     this.has_read = has_read;
 }
 
-function addBookToLibrary() {
+function addBook() {
     myLibrary.push(Book(author, title, pages, has_read));
 }
 
 function printLibrary() {
     console.log(myLibrary);
+}
+
+function removeBook() {
+    myLibrary.pop(Book(author, title, pages, has_read));
 }
