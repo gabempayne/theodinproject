@@ -9,10 +9,11 @@
     border: none;
     padding: 20px;
     font-size: 30px;
-    height: 150px;
-    width: 150px;
+    height: 250px;
+    width: 200px;
+    margin-bottom: 10px;
   }
   .book {
-    height: 33%;
-    width: 33%;
+    height: 250px;
+    width: 200px;
   }
