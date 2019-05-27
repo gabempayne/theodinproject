@@ -6,7 +6,7 @@ function Book(author, title, pages, has_read) {
     this.has_read = has_read;
 }
 
-function addBook() {
+function addBooktoLibrary() {
     myLibrary.push(Book(author, title, pages, has_read));
 }
 
@@ -14,6 +14,6 @@ function printLibrary() {
     console.log(myLibrary);
 }
 
-function removeBook() {
+function removeBookfromLibrary() {
     myLibrary.pop(Book(author, title, pages, has_read));
 }
