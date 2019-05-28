@@ -3,11 +3,19 @@ let myLibrary = [];
 function Book(author, title, pages, has_read) {
     this.author = author;
     this.title = title;
+    this.pages = pages;
     this.has_read = has_read;
 }
 
-function addBooktoLibrary() {
-    myLibrary.push(Book(author, title, pages, has_read));
+function main() {
+	var book = new Book('JRR Tolkien', 'The Two Towers', '430', true);
+	addBooktoLibrary(book);
+}
+
+function addBooktoLibrary(book) {
+    myLibrary.push(book);
+
+    printLibrary();
 }
 
 function printLibrary() {
@@ -17,3 +25,5 @@ function printLibrary() {
 function removeBookfromLibrary() {
     myLibrary.pop(Book(author, title, pages, has_read));
 }
+
+main();
