@@ -1,6 +1,7 @@
 .container {
     margin-top: 10px;
     vertical-align: auto;
+    float:right;
   }
   .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
