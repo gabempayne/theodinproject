@@ -26,4 +26,9 @@ function removeBookfromLibrary() {
     myLibrary.pop(Book(author, title, pages, has_read));
 }
 
+function addBookButton() {
+	
+}
+
+
 main();
