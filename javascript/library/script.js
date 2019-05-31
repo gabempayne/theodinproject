@@ -1,3 +1,6 @@
+/// program is designed to list books you have or have no read
+/// will be changing to a list set up instead of an image setup
+
 let myLibrary = [];
 
 function Book(author, title, pages, has_read) {
