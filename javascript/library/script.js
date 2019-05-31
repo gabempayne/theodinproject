@@ -1,13 +1,16 @@
 /// program is designed to list books you have or have no read
 /// will be changing to a list set up instead of an image setup
 
+const delBtn;
+const checkMark;
+
 let myLibrary = [];
 
 function Book(author, title, pages, has_read) {
     this.author = author;
     this.title = title;
     this.pages = pages;
-    this.has_read = has_read;
+    this.hasRead = hasRead;
 }
 
 function main() {
@@ -31,6 +34,10 @@ function removeBookfromLibrary() {
 
 function addBookButton() {
 	
+}
+
+function hasRead() {
+
 }
 
 

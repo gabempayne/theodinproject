@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="styles.css">
+	<link href="css/all.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="script.js"></script>
 	<title>Library</title>
@@ -14,23 +15,60 @@
 		<h1>Welcome to the library</h1>
 	</header>
 
-	<div class="container">
-	  <div class="row">
+<div class="container">
+	<div class="row">
 	    <div class="col-sm">
-	      <div class="book-container"><img class="book" src="img\hpgof.jpg" alt="book"></div>
-			<button type="button" class="btn btn-success">Read</button>
-			<button type="button" class="btn btn-danger">Delete</button>
+	    	<p style="float: right;">Book Title</p>
 	    </div>
-	  </div>
+		<div class="col-sm">
+  			<p style="float: right;">Book Author</p>
+		</div>
+		<div class="col-sm">
+ 			<p style="float: right;">has read</p>
+		</div>
+		<div class="col-sm">
+			<p style="float: right;">Delete</p>
+		</div>
 	</div>
-	<div class="container">
-	  <div class="row">
+  	<div class="row">
+    	<div class="col-sm">
+      		One of three columns
+    	</div>
+    	<div class="col-sm">
+      		One of three columns
+    	</div>
+    	<div class="col-sm">
+	    	<button type="button"><i class="fas fa-check"></i></button>
+			<button type="button"><i class="fas fa-times"></i></button>
+    	</div>
+  	</div>
+</div>
+
+<div class="container">
+	<div class="row">
 	    <div class="col-sm">
-	      <div class="book-container"><img class="book" src="img\pete.jpg" alt="book"></div>
-			<button type="button" class="btn btn-success">Read</button>
-			<button type="button" class="btn btn-danger">Delete</button>
+	    	Book name placeholder
 	    </div>
-	  </div>
+		<div class="col-sm">
+  			book author place holder
+		</div>
+		<div class="col-sm">
+ 			<button type="button" id="checkmark"><i class="fas fa-check"></i></button>
+			<button type="button" id="deletebtn"><i class="fas fa-times"></i></button>
+		</div>
 	</div>
+  	<div class="row">
+    	<div class="col-sm">
+      		One of three columns
+    	</div>
+    	<div class="col-sm">
+      		One of three columns
+    	</div>
+    	<div class="col-sm">
+	    	<button type="button"><i class="fas fa-check"></i></button>
+			<button type="button"><i class="fas fa-times"></i></button>
+    	</div>
+  	</div>
+</div>
 </body>
 </html>
