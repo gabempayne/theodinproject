@@ -19,8 +19,11 @@
   text-align: right;
 }
 
-#checkmark {
-  color: gray;
+#checkmarkRead {
+  color: red;
+}
+#checkmarkNotRead {
+  color: green;
 }
 button {
   height: 50px;
