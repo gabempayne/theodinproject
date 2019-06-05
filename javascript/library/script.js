@@ -1,8 +1,8 @@
 /// program is designed to list books you have or have no read
 /// will be changing to a list set up instead of an image setup
 
-const delBtn;
-const checkMark;
+const delBtn = document.getElementById('deletebtn');
+const checkMark = document.getElementById('checkMark');
 
 let myLibrary = [];
 
@@ -33,12 +33,23 @@ function removeBookfromLibrary() {
 }
 
 function addBookButton() {
-	
+	checkMark.addEventListener('click', function() {
+		if(checkMark.classList.contains('checkmarkNotRead')) {
+			checkMark.classList.add('checkmarkRead');
+			checkMark.classList.remove('checkmarkNotRead');
+		}
+		if(checkMark.className.classList.contains('checkmarkRead')) {
+			checkMark.classList.add('checkmarkNotRead');
+			checkMark.classList.remove('checkmarkRead');
+		}
+	});
 }
 
 function hasRead() {
 
 }
+
+
 
 
 main();
