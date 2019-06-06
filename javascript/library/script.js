@@ -3,6 +3,7 @@
 
 const delBtn = document.getElementById('deletebtn');
 const checkMarks = document.getElementsByClassName('checkmark');
+const row = document.querySelector('.row').firstElementChild;
 
 let myLibrary = [];
 
@@ -34,7 +35,8 @@ function createBook() {
 	var book = new Book('The Two Towers', 'JRR Tolkien', '430', true);
 	addBooktoLibrary(book);
 
-	console.log(checkMarks.length);
+	console.log(book.setTitle());
+	console.log(row.firstChild.textContent);
 
 	// for(let i = 0; i < checkMarks.length; i++) {
 	// 	checkMarks[i].addEventListener('click', function(){
@@ -42,7 +44,7 @@ function createBook() {
 	// 	});
 	// }
 
-	console.log(book.getTitle());
+	
 }
 
 function addBooktoLibrary(book) {
