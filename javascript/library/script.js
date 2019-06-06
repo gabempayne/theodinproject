@@ -2,45 +2,54 @@
 /// will be changing to a list set up instead of an image setup
 
 const delBtn = document.getElementById('deletebtn');
-const checkMark = document.getElementById('checkmark');
+const checkMarks = document.getElementsByClassName('checkmark');
 
 let myLibrary = [];
 
-function Book(author, title, pages, has_read) {
+function Book(title, author, pages, has_read) {
+	this.title = title;
     this.author = author;
-    this.title = title;
     this.pages = pages;
     this.hasRead = hasRead;
+
+    this.setTitle = function () {
+        return this.title;
+    }
+    this.setAuthor = function () {
+        return this.author;
+    }
+    this.setPages = function () {
+        return this.pages;
+    }
+    this.setRead = function () {
+        return this.hasRead;
+    }
 }
 
+
 function main() {
-	var book = new Book('JRR Tolkien', 'The Two Towers', '430', true);
+	createBook();
+}
+function createBook() {
+	var book = new Book('The Two Towers', 'JRR Tolkien', '430', true);
 	addBooktoLibrary(book);
 
-		checkMark.addEventListener('click', function(){
-		if(checkMark.classList.contains('checkmarkNotRead')) {
-			checkMark.classList.add('checkmarkRead');
-			checkMark.classList.remove('checkmarkNotRead');
-		}
-		if(checkMark.className.classList.contains('checkmarkRead')) {
-			checkMark.classList.add('checkmarkNotRead');
-			checkMark.classList.remove('checkmarkRead');
-		}
-	});
+	console.log(checkMarks.length);
+
+	// for(let i = 0; i < checkMarks.length; i++) {
+	// 	checkMarks[i].addEventListener('click', function(){
+	// 		checkMarks[i].setAttribute('color', 'red');
+	// 	});
+	// }
+
+	console.log(book.getTitle());
 }
 
 function addBooktoLibrary(book) {
     myLibrary.push(book);
-
-    printLibrary();
-}
-
-function printLibrary() {
-    console.log(myLibrary);
 }
 
 function removeBookfromLibrary() {
-    myLibrary.pop(Book(author, title, pages, has_read));
 }
 
 function addBookButton() {
@@ -48,8 +57,21 @@ function addBookButton() {
 }
 
 function hasRead() {
-
+	return Book.getRead();
 }
+
+function getTitle() {
+	Book.getTitle();
+}
+
+function getAuthor() {
+	Book.getAuthor();
+}
+
+function getPages() {
+	Book.getPages();
+}
+
 
 window.onload=function(){
   main();

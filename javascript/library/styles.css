@@ -23,13 +23,16 @@
   color: green;
 }
 .checkmarkNotRead {
-  color: #D3D3D3 ;
+  color: #D3D3D3;
 }
 button {
   height: 50px;
   width: 100px;
   border: none;
   background: none;
+}
+.checkmark {
+  color: #D3D3D3;
 }
 header {
   width: 100%;
