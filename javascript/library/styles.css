@@ -25,7 +25,7 @@
 .checkmarkNotRead {
   color: #D3D3D3;
 }
-button {
+.no-border {
   height: 50px;
   width: 100px;
   border: none;
