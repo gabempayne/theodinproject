@@ -50,23 +50,23 @@
     	</div>
   	</div>
   	<hr>
-  	<div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Add Book</h1>
+<div class="form-popup" id="myForm">
+	<form action="/" class="form-container">
+	    <h1>Add Book</h1>
 
-    <label for="email"><b>Book Title</b></label>
-    <input type="text" placeholder="Enter Title" name="title" required>
+	    <label for="title"><b>Book Title</b></label>
+	    <input type="text" placeholder="Enter Title" name="title" required>
 
-    <label for="psw"><b>Book Author</b></label>
-    <input type="password" placeholder="Enter Author's name" name="author" required>
+	    <label for="author"><b>Book Author</b></label>
+	    <input type="text" placeholder="Enter Author's name" name="author" required>
 
-    <label for="psw"><b>Page Count</b></label>
-    <input type="password" placeholder="Enter page count" name="author" required>
-    <input type="checkbox" name="haveRead" value="Car" checked>I've read this book!<br>
+	    <label for="page"><b>Page Count</b></label>
+	    <input type="text" placeholder="Enter page count" name="author" required>
+	    <input type="checkbox" name="haveRead" value="haveRead" checked>I've read this book!<br>
 
-    <button type="submit" class="btn">Add</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
+	    <button type="submit" class="btn btn-success">Add</button>
+	    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  	</form>
 </div>
 
 	<button type="button" class="btn btn-danger" onclick="openForm()">Add Book</button>

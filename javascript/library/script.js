@@ -75,7 +75,7 @@ function openForm() {
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
-onclick="openForm()"
+
 
 function hasRead() {
 	return Book.getRead();
