@@ -34,8 +34,8 @@ function Book(title, author, pages, has_read) {
 function main() {
 	createBook();
 }
-function createBook() {
-	var book = new Book('The Two Towers', 'JRR Tolkien', '430', true);
+// function createBook() {
+// 	var book = new Book('The Two Towers', 'JRR Tolkien', '430', true);
 	addBooktoLibrary(book);
 
 	// testing content change
